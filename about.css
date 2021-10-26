@@ -1,0 +1,24 @@
+.outer {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  border-left: 10px solid burlywood;
+  border-right: 10px solid burlywood;
+  padding: 50px;
+  margin: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+body {
+  background-image: url("mirage.jpg");
+  color: burlywood;
+}
+.list {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.header {
+  width: 300px;
+  border-top: 2px solid rgba(222, 184, 135, 0.76);
+  border-bottom: 2px solid rgba(222, 184, 135, 0.76);
+}
