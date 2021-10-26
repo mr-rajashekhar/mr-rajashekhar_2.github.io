@@ -1,12 +1,12 @@
 body {
-  background-image: url("images/default-image.jpg");
+  background-image: url("images/Honey\ Dew.jpg");
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .tm {
   font-family: "Times New Roman", Times, serif;
   font-size: 50px;
-  color: rgb(40, 98, 165);
+  color: rgb(0, 110, 28);
 }
 * {
   box-sizing: border-box;
@@ -15,8 +15,10 @@ body {
 /* Float four columns side by side */
 .column {
   float: left;
+  height: 100px;
   width: 33.33%;
-  padding: 0 10px;
+  padding: 30px 10px;
+  align-items: center;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -43,12 +45,13 @@ body {
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
+  padding-top: 50px;
   text-align: center;
   background-color: #34353425;
   position: absolute;
   width: 350px;
   height: 450px;
+  align-items: center;
 }
 .imglogin {
   /* position: relative; */
@@ -89,4 +92,8 @@ body {
 }
 .fa:hover {
   opacity: 0.9;
+}
+.tagline {
+  font-family: "Nunito", sans-serif;
+  font-size: x-large;
 }
