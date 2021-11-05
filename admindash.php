@@ -44,7 +44,18 @@
                 <ion-icon name="people-circle-outline" size="large"></ion-icon>
               </div>
               <span>HR Count</span><br />
-            <h1>300</h1>
+            <!-- <h1>300</h1> -->
+            <?php
+            
+            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+            $sql="SELECT *
+            FROM hr; ";
+            $res= $connect -> query($sql);
+            $cnt=$res->num_rows;
+            echo"<h1>$cnt</h1>";
+            
+            
+            ?>
             </div>
           </a>
           </div>
@@ -55,7 +66,18 @@
               <ion-icon name="people-circle-outline" size="large"></ion-icon>
             </div>
             <span>Employee Count</span><br />
-            <h1>500</h1>
+            <!-- <h1>500</h1> -->
+            <?php
+            
+            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+            $sql="SELECT *
+            FROM employees_data; ";
+            $res= $connect -> query($sql);
+            $cnt=$res->num_rows;
+            echo"<h1>$cnt</h1>";
+            
+            
+            ?>
             <!-- <h5>Part Time:500</h5>
             <h5>Full Time:500</h5>
             <h5>Total:1000</h5> -->
