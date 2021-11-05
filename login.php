@@ -7,11 +7,11 @@ $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sq
 if(isset($_POST["hr_signin"])){
   $password=$_POST["hr_pwd"];
   $username=$_POST["hr_uname"];
-  $sql="SELECT * FROM users where username ='$user' and password='$password'";
+  $sql="SELECT * FROM hr where User_name ='$username' and Password='$password'";
   $res= $connect -> query($sql);
   if($res->num_rows !=0) {
     session_start();
-    $row = mysqli_fetch_assoc($res)
+    $row = mysqli_fetch_assoc($res);
     $_SESSION['loggedin']=true;
     $_SESSION['id']=$row["id"];
     $_SESSION["hr"]=true;
@@ -26,13 +26,15 @@ if(isset($_POST["hr_signin"])){
 }
 
 // employee signin ___________________
-if(isset($_POST["emp_signin"])){
+ if(isset($_POST["emp_signin"])){
   $password=$_POST["emp_pwd"];
   $username=$_POST["emp_uname"];
-  $sql="SELECT * FROM users where username ='$user' and password='$password'";
+  $sql="SELECT * FROM employees_data where User_name ='$username' and Password='$password'";
   $res= $connect -> query($sql);
+  
   if($res->num_rows !=0) {
     session_start();
+    $row = mysqli_fetch_assoc($res);
     $_SESSION['loggedin']=true;
     $_SESSION['id']=$row["id"];
     $_SESSION["emp"]=true;
@@ -44,9 +46,10 @@ if(isset($_POST["emp_signin"])){
   else{
     echo "'$login'";}
 
-
+   
 
 }
+
 
 
 
