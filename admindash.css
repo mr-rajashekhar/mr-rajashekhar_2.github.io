@@ -87,3 +87,16 @@ h1 {
 a {
   text-decoration: none;
 }
+.card-icon1 {
+  padding-left: 60px;
+  align-content: center;
+}
+.info1 {
+  width: 230px;
+  height: 150px;
+  padding: 30px;
+  background: rgb(133, 4, 255);
+  margin-right: 20px;
+  border-radius: 10px;
+  color: #fff;
+}

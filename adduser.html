@@ -7,21 +7,23 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="admindash.css" />
+    <link rel="stylesheet" href="adduser.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+
   </head>
   <body>
     <div class="wrap">
       <div class="sidebar">
         <ul>
-          <li class="active">
+          <li >
             <ion-icon name="home" size="large"></ion-icon>
           </li>
-          <a href="adduser.html">  <li><ion-icon name="person-add-sharp" size="large"></ion-icon></li></a>
+          <a href="adduser.html" >  <li class="active"><ion-icon name="person-add-sharp" size="large"></ion-icon></li></a>
           <li><ion-icon name="eye-sharp" size="large">VIEW</ion-icon></li>
           <li><ion-icon name="log-out-sharp" size="large"></ion-icon></li>
         </ul>
@@ -32,35 +34,61 @@
             <h2>Dashboard</h2>
             <span>Admin Page</span>
           </div>
-          <div class="search">
+          <!-- <div class="search">
             <input type="search" placeholder="Search" />
-          </div>
+          </div> -->
         </div>
-        <div class="board">
-          <a href="viewhr.html">
+        <div class="board_1">
+          <!-- <a href="viewhr.html">
           <div class="card">
             <div class="info">
-              <div class="card-icon">
-                <ion-icon name="people-circle-outline" size="large"></ion-icon>
+              <div class="card-icon1">
+                <img src="hr_add.png" height="50%" width="50%">
               </div>
-              <span>HR Count</span><br />
-            <h1>300</h1>
+              <span>ADD HR</span><br />
+            <h2>ADD HR</h2> 
             </div>
-          </a>
-          </div>
+          </a> -->
+          
           <a href="viewhr.html">
-        <div class="card">
-          <div class="info">
+        <div class="card_1">
+          <div class="info_1">
             <div class="card-icon">
-              <ion-icon name="people-circle-outline" size="large"></ion-icon>
+              <img src="emp.png" height="90%" width="90%">
             </div>
-            <span>Employee Count</span><br />
-            <h1>500</h1>
+            <div class="icon">
+              <div class="add">
+              <ion-icon name="add-circle" size="large"></ion-icon>
+            </div>
+            <div class="mod">
+              <ion-icon name="pencil" size="large"></ion-icon>
+            </div>
+            </div>
+
             <!-- <h5>Part Time:500</h5>
             <h5>Full Time:500</h5>
             <h5>Total:1000</h5> -->
           </div>
         </a>
+      </a>
+    </div>
+    <a href="viewhr.html">
+      <div class="card_1">
+        <div class="info_1">
+          <div class="card-icon">
+            <img src="hr_add.png" height="90%" width="90%">
+          </div>
+          <div class="icon">
+            <div class="add">
+            <ion-icon name="add-circle" size="large"></ion-icon>
+          </div>
+          <div class="mod">
+            <ion-icon name="pencil" size="large"></ion-icon>
+          </div>
+          </div>
+    </div>
+  </a>
+</div>
         </div>
       </div>
       </div>

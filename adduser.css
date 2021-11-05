@@ -1,0 +1,27 @@
+.info_1 {
+  display: flex;
+  width: 230px;
+  height: 150px;
+  padding-top: 20px;
+  justify-content: space-evenly;
+  background: rgb(133, 4, 255);
+  margin: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+.card_1 {
+  display: flex;
+  height: 250px;
+  width: 250px;
+}
+.add {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.board_1 {
+  display: flex;
+  justify-content: center;
+
+  /* margin-left: 250px;
+  margin-right: 250px; */
+}
