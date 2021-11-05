@@ -184,17 +184,21 @@ h1 {
   font-size: 14px;
   font-weight: 600;
 }
-h3 {
-  /* color: red; */
+/* h3 {
+  /* color: red; 
   margin-left: 10px;
   align-content: center;
   margin-bottom: 50px;
-}
+} */
 .x {
   background-color: red;
   color: white;
   margin-left: 590px;
   margin-right: 590px;
   width: 200px;
-  height: 20px;
+  height: 50px;
+  padding: 4px;
+  padding-left: 4px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
