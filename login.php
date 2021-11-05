@@ -1,8 +1,8 @@
 <?php
 
-$login = file_get_contents("login.html");
+$login = file_get_contents("login_w.html");
 // connect to database
-$connect = new mysqli("localhost","root","","cred");
+$connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
 // hr signin-------------
 if(isset($_POST["hr_signin"])){
   $password=$_POST["hr_pwd"];
