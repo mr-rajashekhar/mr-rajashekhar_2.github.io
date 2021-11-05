@@ -93,3 +93,6 @@ form {
 form .admin {
   padding: 30px;
 }
+.login-blocks {
+  display: flex;
+}
