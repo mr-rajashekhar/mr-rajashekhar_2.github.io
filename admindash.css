@@ -12,7 +12,7 @@ body {
 }
 .sidebar {
   width: 100px;
-  height: 1000px;
+  height: 800px;
   background: #fff;
 }
 .sidebar ul {
@@ -47,7 +47,7 @@ h2 {
 }
 .search {
   width: 400px;
-  margin-left: 70%;
+  margin-left: 120%;
 }
 input {
   border: none;
@@ -61,15 +61,29 @@ input {
 }
 .info {
   width: 230px;
-  height: 100px;
-  padding: 20px;
-  background: burlywood;
+  height: 150px;
+  padding: 30px;
+  background: rgb(133, 4, 255);
   margin-right: 20px;
   border-radius: 10px;
+  color: #fff;
 }
 .info span {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 h5 {
-  margin-top: 38px;
+  margin-top: 8px;
+}
+.board {
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-left: 250px;
+  margin-right: 250px; */
+}
+h1 {
+  align-content: center;
+  font-size: 56px;
+}
+a {
+  text-decoration: none;
 }
