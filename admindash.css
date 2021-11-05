@@ -29,7 +29,7 @@ body {
   color: rgb(133, 4, 255);
 }
 .sidebar li:hover,
-li:active {
+li.active {
   border-right: 5px solid rgb(133, 4, 255);
 }
 
