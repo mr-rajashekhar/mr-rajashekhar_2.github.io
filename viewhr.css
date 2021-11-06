@@ -11,11 +11,12 @@ body {
   display: flex;
 }
 .sidebar {
-  /* position: fixed; */
+  position: fixed;
   width: 100px;
   height: 800px;
   background: #fff;
   padding-top: 30px;
+  margin-right: 300px;
 }
 
 .sidebar ul {
@@ -50,7 +51,7 @@ h2 {
 }
 .search {
   width: 400px;
-  margin-left: 120%;
+  margin-left: 900px;
 }
 input {
   border: none;
@@ -142,4 +143,7 @@ p {
   border: 1px solid #03bfcb;
   border-radius: 50%;
   padding: 7px;
+}
+.main {
+  margin-left: 100px;
 }

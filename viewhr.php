@@ -47,6 +47,7 @@
           </div>
         </div>
        <!-- for tiles -->
+       <div class="tiles">
        <?php
        $temp='<div class="card-container">
        <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
@@ -74,6 +75,7 @@
     
     
     ?>
+    </div>
       </div>
       </div>
     </div>
