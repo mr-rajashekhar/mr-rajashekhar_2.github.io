@@ -43,10 +43,18 @@
             <span>Admin Page</span>
           </div>
           <div class="search">
-            <input type="search" placeholder="Search" />
+           <form action="viewemp.php" method="post"> 
+             <input type="search" name="search_id" placeholder="search by id" />
+             <input
+            type="submit"
+            name="emp_search"
+            value="search"
+          />
+          </form>
           </div>
         </div>
        <!-- for tiles -->
+       <div class="tiles">
        <?php
        $temp='<div class="card-container">
        <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
@@ -54,7 +62,29 @@
        <p>id: hai</p>
       </div>';
       $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-      $sql="SELECT *
+      if(isset($_POST["emp_search"])){
+        $id=$_POST["search_id"];
+        if($id){$sql="SELECT *
+          FROM employees_data where id='$id'; ";}
+        else{
+          $sql="SELECT *
+      FROM employees_data ; ";
+        }
+      $res= $connect -> query($sql);
+      if($res->num_rows !=0){
+        
+        while($data = $res -> fetch_assoc()){
+          $name=$data["First_Name"];
+          $id =$data["id"];
+            $temp1= str_replace("vicky",$name,$temp);
+            echo str_replace("hai",$id,$temp1);
+
+        }
+
+      }
+      }
+      else{
+        $sql="SELECT *
       FROM employees_data; ";
       $res= $connect -> query($sql);
       if($res->num_rows !=0){
@@ -68,12 +98,14 @@
         }
 
       }
+      }
      
 
     
     
     
     ?>
+    </div>
       </div>
       </div>
     </div>

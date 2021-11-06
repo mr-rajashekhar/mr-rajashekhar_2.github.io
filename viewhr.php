@@ -43,7 +43,14 @@
             <span>Admin Page</span>
           </div>
           <div class="search">
-            <input type="search" placeholder="Search" />
+           <form action="viewhr.php" method="post"> 
+             <input type="search" name="search_id" placeholder="search by id" />
+             <input
+            type="submit"
+            name="hr_search"
+            value="search"
+          />
+          </form>
           </div>
         </div>
        <!-- for tiles -->
@@ -55,7 +62,29 @@
        <p>id: hai</p>
       </div>';
       $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-      $sql="SELECT *
+      if(isset($_POST["hr_search"])){
+        $id=$_POST["search_id"];
+        if($id){$sql="SELECT *
+          FROM hr where id='$id'; ";}
+        else{
+          $sql="SELECT *
+      FROM hr ; ";
+        }
+      $res= $connect -> query($sql);
+      if($res->num_rows !=0){
+        
+        while($data = $res -> fetch_assoc()){
+          $name=$data["First_Name"];
+          $id =$data["id"];
+            $temp1= str_replace("vicky",$name,$temp);
+            echo str_replace("hai",$id,$temp1);
+
+        }
+
+      }
+      }
+      else{
+        $sql="SELECT *
       FROM hr; ";
       $res= $connect -> query($sql);
       if($res->num_rows !=0){
@@ -68,6 +97,7 @@
 
         }
 
+      }
       }
      
 
