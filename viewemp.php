@@ -44,7 +44,12 @@
           </div>
           <div class="search">
            <form action="viewemp.php" method="post"> 
-             <input type="search" name="search_id" placeholder="search by id" />
+           <select name="dropdn"  id="dropdn">
+    <option value="name">name</option>
+    <option value="id">id</option>
+    
+  </select>
+             <input type="search" name="search_by" placeholder="search by " />
              <input
             type="submit"
             name="emp_search"
@@ -63,12 +68,22 @@
       </div>';
       $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
       if(isset($_POST["emp_search"])){
-        $id=$_POST["search_id"];
-        if($id){$sql="SELECT *
-          FROM employees_data where id='$id'; ";}
+        if($_POST["dropdn"]=="name"){
+
+          $name=$_POST["search_by"];
+          $sql = "SELECT * from employees_data where First_Name like '%$name%'";
+
+        }
         else{
-          $sql="SELECT *
-      FROM employees_data ; ";
+
+          $id=$_POST["search_by"];
+          if($id){$sql="SELECT *
+            FROM employees_data where id='$id'; ";}
+          else{
+            $sql="SELECT *
+        FROM employees_data ; ";
+          }
+
         }
       $res= $connect -> query($sql);
       if($res->num_rows !=0){
