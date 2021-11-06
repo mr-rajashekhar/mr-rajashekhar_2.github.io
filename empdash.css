@@ -133,3 +133,39 @@ h4 {
   letter-spacing: 1px;
   margin-bottom: 25px;
 }
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  font-family: "Dongle", sans-serif;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+.tab {
+  margin-left: 100px;
+}
+.sidebar-header {
+  /* height: 4.875rem; */
+  display: flex;
+  /* margin: 10px;
+  border: 5px solid black; */
+  justify-content: space-between;
+}
+.title {
+  text-align: center;
+  align-items: center;
+}
+.sidebar-header .link {
+  padding: 1.5rem 2rem;
+}
+.sidebar .sidebar-header .image {
+  max-width: 50%;
+  max-height: 2rem;
+}
+.sidebar-header span {
+  font-size: 100px;
+}
