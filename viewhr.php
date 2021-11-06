@@ -18,11 +18,12 @@
     <div class="wrap">
       <div class="sidebar">
         <ul>
-          <li class="active">
+        <a href="admindash.php"> 
+          <li >
             <ion-icon name="home" size="large"></ion-icon>
-          </li>
+          </li></a>
           <a href="adduser.html">  <li><ion-icon name="person-add-sharp" size="large"></ion-icon></li></a>
-          <li><ion-icon name="eye-sharp" size="large">VIEW</ion-icon></li>
+          <li class="active"><ion-icon name="eye-sharp" size="large">VIEW</ion-icon></li>
           <li><ion-icon name="log-out-sharp" size="large"></ion-icon></li>
         </ul>
       </div>
