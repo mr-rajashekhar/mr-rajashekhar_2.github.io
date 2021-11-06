@@ -1,0 +1,223 @@
+.info_1 {
+  display: flex;
+  width: 230px;
+  height: 150px;
+  padding-top: 20px;
+  justify-content: space-evenly;
+  background: rgb(133, 4, 255);
+  margin: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+.card_1 {
+  display: flex;
+  height: 300px;
+  width: 300px;
+}
+.add {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.board_1 {
+  display: flex;
+  justify-content: center;
+
+  /* margin-left: 250px;
+  margin-right: 250px; */
+}
+.nav-bar {
+  display: flex;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: purple;
+}
+form {
+  border: 3px solid #f1f1f1;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: purple;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+.form {
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  padding: 0px 40px;
+  padding-bottom: 10px;
+  box-shadow: 0 10px 15px rgba(0, 217, 255, 0.329);
+  border: 5px solid blueviolet;
+  margin-top: 30px;
+  /* padding: 60px;
+  padding-top: 0;
+  border-radius: 30px; */
+}
+.hr {
+  /* border: 5px solid blueviolet; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 450px;
+  margin-right: 30px;
+  /* height: 100vh; */
+  /* height: 540px;
+  width: 660px;
+ 
+  padding: 40px;
+  border-radius: 30px; */
+}
+/* .imgcontainer1 {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  margin-left: 280px;
+  align-items: center;
+} */
+
+form .admin {
+  padding: 30px;
+}
+.login-blocks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+.container {
+  position: relative;
+  height: 20px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #dadce0;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 10px 20px;
+  outline: none;
+  background: none;
+  z-index: 1;
+}
+::placeholder {
+  color: transparent;
+}
+.label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: white;
+  color: #dadce0;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+.submitBtn {
+  display: block;
+  margin-left: auto;
+  padding: 15px 30px;
+  border: none;
+  background-color: purple;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 60px;
+}
+
+.submitBtn:hover {
+  background-color: #9867c5;
+  transform: translateY(-2px);
+}
+.input:focus + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+  color: purple;
+}
+.input:focus {
+  border: 2px solid purple;
+}
+.input:not(:placeholder-shown) + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+}
+h2 {
+  margin: 20px;
+  color: purple;
+}
+.h-title {
+  margin-bottom: 50px;
+}
