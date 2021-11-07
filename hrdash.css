@@ -186,3 +186,52 @@ td {
   padding-top: 10px;
   margin-right: 4px;
 }
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+.card {
+  display: flex;
+  padding: 15px 40px;
+}
+.info {
+  width: 230px;
+  height: 150px;
+  padding: 30px;
+  background: rgb(133, 4, 255);
+  margin-right: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+.info span {
+  margin-bottom: 30px;
+}
+h5 {
+  margin-top: 8px;
+}
+.board {
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-left: 250px;
+  margin-right: 250px; */
+}
+h1 {
+  align-content: center;
+  font-size: 56px;
+}
+a {
+  text-decoration: none;
+}
+.card-icon1 {
+  padding-left: 60px;
+  align-content: center;
+}
+.info1 {
+  width: 230px;
+  height: 150px;
+  padding: 30px;
+  background: rgb(133, 4, 255);
+  margin-right: 20px;
+  border-radius: 10px;
+  color: #fff;
+}

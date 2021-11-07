@@ -75,8 +75,6 @@
             $res= $connect -> query($sql);
             $cnt=$res->num_rows;
             echo"<h1>$cnt</h1>";
-            
-            
             ?>
             <!-- <h5>Part Time:500</h5>
             <h5>Full Time:500</h5>
