@@ -39,8 +39,8 @@
           <h4>Job Description</h4>
         </center>
         <ul>
-          <li>HOME</li>
-          <li class="active">VIEW PROFILE</li>
+          <a href="hrdash.php"><li>HOME</li></a>
+        <a href="hr_view_profile.php"><li class="active">VIEW PROFILE</li></a>
           <li>LOGOUT</li>
         </ul>
       </div>

@@ -7,6 +7,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="hrdash.css" />
+ 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
@@ -40,7 +41,7 @@
         </center>
         <ul>
          <a href="hrdash.php"> <li class="active">HOME</li></a>
-         <a href="hr_view_profile.php"><li>VIEW PROFILE</li></a>
+  
           <li>LOGOUT</li>
         </ul>
       </div>
@@ -50,32 +51,142 @@
             <h3>HR's Glaza</h3>
           </div>
         </div>
-          <div class="card">
+        <div class="sub">
+        <div class="card">
           <a href="viewhr.html">
+          <div class="card">
             <div class="info">
               <div class="card-icon">
-                <!-- <ion-icon name="people-circle-outline" size="large"></ion-icon> -->
-                <img src="team.png" height="100px" width="100px" >
+                <ion-icon name="people-circle-outline" size="large"></ion-icon>
               </div>
-              <center>
-              <h3>Employee Count :</h3>
-              <!-- <h1>500</h1> -->
-              <?php
-              
-              $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-              $sql="SELECT *
-              FROM employees_data; ";
-              $res= $connect -> query($sql);
-              $cnt=$res->num_rows;
-              echo"<h1>$cnt</h1>";
-              ?>
-              </center>
-              <!-- <h5>Part Time:500</h5>
-              <h5>Full Time:500</h5>
-              <h5>Total:1000</h5> -->
-               </a>
+              <span>Employee Count:</span><br />
+            <!-- <h1>300</h1> -->
+   
+            <h1 class="time">
+            <?php
+            
+            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+            $sql="SELECT *
+            FROM hr; ";
+            $res= $connect -> query($sql);
+            $cnt=$res->num_rows;
+            echo"$cnt";
+            
+            
+            ?>
+            </h1>
+           
             </div>
-         
+          </a>
+          </div>
+</div>
+      <div class="card">
+          <a href="viewhr.html">
+          <div class="card">
+            <div class="info">
+              <div class="card-icon">
+                <ion-icon name="people-circle-outline" size="large"></ion-icon>
+              </div>
+              <span>Active Now</span><br />
+            <!-- <h1>300</h1> -->
+            <h1 class="time">
+            <?php
+            
+            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+            $sql="SELECT *
+            FROM hr; ";
+            $res= $connect -> query($sql);
+            $cnt=$res->num_rows;
+            echo"$cnt";
+            
+            
+            ?>
+            </h1>
+            </div>
+          </a>
+          </div>
+      </div>
+      </div>
+      <hr>
+      <div class="sub">
+      <div class="card">
+          <a href="viewhr.html">
+          <div class="card">
+            <div class="info">
+              <div class="card-icon">
+                <ion-icon name="people-circle-outline" size="large"></ion-icon>
+              </div>
+              <span>Pay Scale/1hr</span><br />
+            <!-- <h1>300</h1> -->
+            <h1 class="time">
+            <?php
+            
+            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+            $sql="SELECT *
+            FROM hr; ";
+            $res= $connect -> query($sql);
+            $cnt=$res->num_rows;
+            echo"$cnt";
+            
+            
+            ?>
+            </h1>
+            </div>
+          </a>
+          </div>
+          </div>
+          <div class="card">
+          <a href="viewhr.html">
+          <div class="card">
+            <div class="info">
+              <div class="card-icon">
+                <ion-icon name="people-circle-outline" size="large"></ion-icon>
+              </div>
+              <span>Last Login</span><br />
+            <!-- <h1>300</h1> -->
+            <h1 class="time">
+            <?php
+            
+            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+            $sql="SELECT *
+            FROM hr; ";
+            $res= $connect -> query($sql);
+            $cnt=$res->num_rows;
+            echo"$cnt";
+            
+            
+            ?>
+            </h1>
+            </div>
+          </a>
+          </div>
+          </div>
+          <div class="card">
+          <a href="viewhr.html">
+          <div class="card">
+            <div class="info">
+              <div class="card-icon">
+                <ion-icon name="people-circle-outline" size="large"></ion-icon>
+              </div>
+              <span>Current Active Time</span><br />
+            <!-- <h1>300</h1> -->
+            <h1 class="time">
+            <?php
+            
+            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+            $sql="SELECT *
+            FROM hr; ";
+            $res= $connect -> query($sql);
+            $cnt=$res->num_rows;
+            echo"$cnt";
+            
+            
+            ?>
+            </h1>
+            </div>
+          </a>
+          </div>
+          </div>
       </div>
     </div>
     <script

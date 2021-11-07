@@ -97,8 +97,8 @@ h1 {
 }
 a {
   text-decoration: none;
-  text-decoration-color: white;
-  color: #fff;
+  text-decoration-color: black;
+  color: black;
 }
 .card-icon1 {
   padding-left: 60px;
@@ -175,7 +175,7 @@ td {
   display: flex;
   height: 60px;
   vertical-align: middle;
-
+  background-color: rgb(133, 4, 255);
   width: 250px;
 }
 .info_1 {
@@ -195,7 +195,7 @@ h3 {
 .card {
   display: flex;
   padding: 15px 40px;
-  height: fix-content;
+  width: 280px;
 }
 .info {
   width: 230px;
@@ -239,6 +239,29 @@ a {
   border-radius: 10px;
   color: #fff;
 }
-.card-icon {
-  padding-left: 60px;
+
+.sub {
+  display: flex;
+}
+hr.style-seven {
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr {
+  border: 0;
+  border-bottom: 1px dashed plum;
+  background: purple;
+}
+.main {
+  width: 1200px;
+}
+.sub1 {
+  display: flex;
+}
+.time {
+  font-size: 70px;
 }
