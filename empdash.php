@@ -31,8 +31,27 @@
           <img src="male.png" width="100%" height="100%" />
         </div>
         <center>
-          <h2>Empl Name</h2>
-          <h4>Job Description</h4>
+          <h2>
+          <?php
+          SESSION_start();
+          $id=$_SESSION["id"];
+          $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+          $sql="SELECT * FROM employees_data where id ='$id' ";
+          $res= $connect -> query($sql);
+          $row = mysqli_fetch_assoc($res);
+          $name=$row["First_Name"];
+          echo $name;
+          
+          
+          
+          
+          ?>
+
+
+
+
+          </h2>
+          <h4>Employee</h4>
         </center>
         <ul>
           <li class="active">HOME</li>
@@ -58,12 +77,14 @@
             <h1 class="time">
             <?php
             
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
+
+           $id=$_SESSION["id"];
+           $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+           $sql="SELECT * FROM employees_data where id ='$id' ";
+           $res= $connect -> query($sql);
+           $row = mysqli_fetch_assoc($res);
+           $payscale=$row["Salary"];
+           echo $payscale;
             
             
             ?>
@@ -84,12 +105,15 @@
             <h1 class="time">
             <?php
             
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
+            $id=$_SESSION["id"];
+             $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+             $sql="SELECT * FROM employees_data where id ='$id' ";
+             $res= $connect -> query($sql);
+            
+              $row = mysqli_fetch_assoc($res);
+              $payscale=$row["Login"];
+              echo $payscale;
+             
             
             
             ?>
@@ -105,17 +129,17 @@
               <div class="card-icon">
                 <ion-icon name="people-circle-outline" size="large"></ion-icon>
               </div>
-              <span>Current Active Time</span><br />
+              <span>Total Active Time</span><br />
             <!-- <h1>300</h1> -->
             <h1 class="time">
             <?php
-            
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
+             $id=$_SESSION["id"];
+             $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+             $sql="SELECT * FROM employees_data where id ='$id' ";
+             $res= $connect -> query($sql);
+             $row = mysqli_fetch_assoc($res);
+             $payscale=$row["Days_attented"];
+             echo $payscale;
             
             
             ?>

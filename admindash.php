@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="board">
-          <a href="viewhr.html">
+          <a href="viewhr.php">
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -59,7 +59,7 @@
             </div>
           </a>
           </div>
-          <a href="viewhr.html">
+          <a href="viewemp.php">
         <div class="card">
           <div class="info">
             <div class="card-icon">

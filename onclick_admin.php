@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+<?php
+$temp='<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -46,28 +48,29 @@
           </div>
         </div>
         <div class="sub">
-                  <center>
+ <center>
+
         <div class="card-container">
-    <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-    <h3>Ricky Park</h3>
-    <h6>New York</h6>
-    <p>User interface designer and <br /> front-end developer</p>
-    <div class="buttons">
-        <button class="primary">
-            Image
-        </button>
-        <button class="primary">
-            Location
-        </button>
-    </div>
-    <!-- <center>
-      <div class="x"> -->
-    <button class="primary ">
-            Calculate Salary
-        </button>
-      <!-- </div>
-    </center> -->
-</div>
+      <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+      <h3>vicky</h3>
+      <h4>hai</h4>
+      <div class="buttons">
+          <button class="primary">
+              Image
+          </button>
+          <button class="primary">
+              Location
+          </button>
+      </div>
+      <!-- <center>
+        <div class="x"> -->
+      <button class="primary ">
+              Calculate Salary
+          </button>
+        <!-- </div>
+      </center> -->
+  </div>
+ 
 </center>
 </div>
         <div class="sub">
@@ -80,14 +83,7 @@
               <span>Pay Scale/1hr</span><br />
             <!-- <h1>300</h1> -->
             <h1 class="time">
-            <?php
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";            
-            ?>
+         %payscale%
             </h1>
             </div>
        
@@ -102,17 +98,7 @@
               <span>Last Login</span><br />
             <!-- <h1>300</h1> -->
             <h1 class="time">
-            <?php
-            
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
-            
-            
-            ?>
+            %lastlogin%
             </h1>
             </div>
 
@@ -128,17 +114,7 @@
               <span>Current Active Time</span><br />
             <!-- <h1>300</h1> -->
             <h1 class="time">
-            <?php
-            
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
-            
-            
-            ?>
+            %activetime%
             </h1>
             </div>
 
@@ -154,4 +130,71 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
   </body>
-</html>
+</html>';
+
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+  $url = "https://";   
+else  
+  $url = "http://";   
+// Append the host(domain name, ip) to the URL.   
+$url.= $_SERVER['HTTP_HOST'];   
+
+// Append the requested resource location to the URL   
+$url.= $_SERVER['REQUEST_URI'];    
+$url_components = parse_url($url);
+ 
+// Use parse_str() function to parse the
+// string passed via URL
+parse_str($url_components['query'], $params);
+$id=$params["id"];
+$role=$params["role"];
+$connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");     
+if($role=="hr"){$sql="SELECT *
+  FROM hr where id='$id'; "; 
+  $res= $connect -> query($sql);  
+  $data = $res -> fetch_assoc();
+  $name=$data["First_Name"];
+  $temp1= str_replace("vicky",$name,$temp);
+  $active=$data["Hours_active"];
+  $payscale=$data["Salary"];
+  $lastlogin=$data["Login"];
+  $temp1= str_replace("%activetime%",$active,$temp1);
+  $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);
+  $temp1= str_replace("%payscale%",$payscale,$temp1);
+  echo str_replace("hai","hr",$temp1);
+
+
+}
+else{
+  $sql="SELECT *
+FROM employees_data where id='$id'; ";  
+$res= $connect -> query($sql);  
+$data = $res -> fetch_assoc();
+$name=$data["First_Name"];
+$temp1= str_replace("vicky",$name,$temp);
+ $active=$data["Days_attented"];
+ $payscale=$data["Salary"];
+ $lastlogin=$data["Login"];
+ $temp1= str_replace("%activetime%",$active,$temp1);
+ $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);
+ $temp1= str_replace("%payscale%",$payscale,$temp1);
+ echo str_replace("hai","employee",$temp1);
+
+}
+
+
+ 
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     ?>    

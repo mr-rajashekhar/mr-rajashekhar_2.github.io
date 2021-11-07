@@ -36,8 +36,26 @@
           <img src="hr1.png" width="100%" height="100%" />
         </div>
         <center>
-          <h2>HR Name</h2>
-          <h4>Job Description</h4>
+          <h2>
+
+         
+          <?php
+          SESSION_start();
+          $id=$_SESSION["id"];
+          $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+          $sql="SELECT * FROM hr where id ='$id' ";
+          $res= $connect -> query($sql);
+          $row = mysqli_fetch_assoc($res);
+          $name=$row["First_Name"];
+          echo $name;
+          
+          
+          
+          
+          ?>
+
+          </h2>
+          <h4>HR</h4>
         </center>
         <ul>
          <a href="hrdash.php"> <li class="active">HOME</li></a>

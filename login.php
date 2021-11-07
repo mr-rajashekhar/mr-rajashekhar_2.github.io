@@ -38,6 +38,9 @@ if(isset($_POST["hr_signin"])){
     $_SESSION['loggedin']=true;
     $_SESSION['id']=$row["id"];
     $_SESSION["emp"]=true;
+    $id=$row["id"];
+    $date = date('m/d/Y h:i:s a', time());
+    $sql="UPDATE  employees_data where  id='$id' SET Login='$date';";
     header('Location: empdash.php');
     exit();
     

@@ -62,11 +62,11 @@
        <!-- for tiles -->
        <div class="tiles">
        <?php
-       $temp='<div class="card-container">
+       $temp='<a href="onclick_admin.php?id=xy&&role=hr"><div class="card-container">
        <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
        <h3>vicky</h3>
        <p>id: hai</p>
-      </div>';
+      </div></a>';
       $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
       if(isset($_POST["hr_search"])){
         if($_POST["dropdn"]=="name"){
@@ -94,6 +94,7 @@
           $name=$data["First_Name"];
           $id =$data["id"];
             $temp1= str_replace("vicky",$name,$temp);
+            $temp1= str_replace("xy",$id,$temp1);
             echo str_replace("hai",$id,$temp1);
 
         }
@@ -110,6 +111,7 @@
           $name=$data["First_Name"];
           $id =$data["id"];
             $temp1= str_replace("vicky",$name,$temp);
+            $temp1= str_replace("xy",$id,$temp1);
             echo str_replace("hai",$id,$temp1);
 
         }

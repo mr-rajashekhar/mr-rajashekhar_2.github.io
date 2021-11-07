@@ -36,8 +36,25 @@
           <img src="hr1.png" width="100%" height="100%" />
         </div>
         <center>
-          <h2>HR Name</h2>
-          <h4>Job Description</h4>
+          <h2>
+
+          <?php
+          SESSION_start();
+          $id=$_SESSION["id"];
+          $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+          $sql="SELECT * FROM hr where id ='$id' ";
+          $res= $connect -> query($sql);
+          $row = mysqli_fetch_assoc($res);
+          $name=$row["First_Name"];
+          echo $name;
+          
+          
+          
+          
+          ?>
+
+          </h2>
+          <h4>HR</h4>
         </center>
         <ul>
          <a href="hrdash.php"> <li class="active">HOME</li></a>
@@ -53,7 +70,7 @@
         </div>
         <div class="sub">
         <div class="card">
-          <a href="viewhr.html">
+          <a href="viewemp.php">
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -67,7 +84,7 @@
             
             $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
             $sql="SELECT *
-            FROM hr; ";
+            FROM employees_data; ";
             $res= $connect -> query($sql);
             $cnt=$res->num_rows;
             echo"$cnt";
@@ -81,7 +98,7 @@
           </div>
 </div>
       <div class="card">
-          <a href="viewhr.html">
+          <a href="#">
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -94,7 +111,7 @@
             
             $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
             $sql="SELECT *
-            FROM hr; ";
+            FROM employees_data where status='1'; ";
             $res= $connect -> query($sql);
             $cnt=$res->num_rows;
             echo"$cnt";
@@ -119,13 +136,14 @@
             <!-- <h1>300</h1> -->
             <h1 class="time">
             <?php
-            
+            $id=$_SESSION["id"];
             $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
             $sql="SELECT *
-            FROM hr; ";
+            FROM hr where id='$id'; ";
             $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
+            $row = mysqli_fetch_assoc($res);
+            $payscale=$row["Salary"];
+            echo $payscale;
             
             
             ?>
@@ -146,13 +164,14 @@
             <h1 class="time">
             <?php
             
+            $id=$_SESSION["id"];
             $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
             $sql="SELECT *
-            FROM hr; ";
+            FROM hr where id='$id'; ";
             $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
-            
+            $row = mysqli_fetch_assoc($res);
+            $lastlogin=$row["Login"];
+            echo $lastlogin;
             
             ?>
             </h1>
@@ -172,12 +191,14 @@
             <h1 class="time">
             <?php
             
+            $id=$_SESSION["id"];
             $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
             $sql="SELECT *
-            FROM hr; ";
+            FROM hr where id='$id'; ";
             $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
+            $row = mysqli_fetch_assoc($res);
+            $time=$row["Hours_active"];
+            echo $time;
             
             
             ?>
