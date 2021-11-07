@@ -48,65 +48,31 @@
       <div class="main">
         <div class="head">
           <div class="h-title">
-            <h3>HR's Glaza</h3>
+            <h3>HR's Glaza/Employee Details</h3>
           </div>
         </div>
-        <div class="sub">
-        <div class="card">
-          <a href="viewhr.html">
-          <div class="card">
-            <div class="info">
-              <div class="card-icon">
-                <ion-icon name="people-circle-outline" size="large"></ion-icon>
-              </div>
-              <span>Employee Count:</span><br />
-            <!-- <h1>300</h1> -->
-   
-            <h1 class="time">
-            <?php
-            
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
-            
-            
-            ?>
-            </h1>
-           
-            </div>
-          </a>
-          </div>
+       <center>
+        <div class="card-container">
+    <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+    <h3>Ricky Park</h3>
+    <h6>New York</h6>
+    <p>User interface designer and <br /> front-end developer</p>
+    <div class="buttons">
+        <button class="primary">
+            Image
+        </button>
+        <button class="primary">
+            Location
+        </button>
+    </div>
+    <center>
+      <div class="x">
+    <button class="primary ">
+            Calculate Salary
+        </button></div>
+    </center>
 </div>
-      <div class="card">
-          <a href="viewhr.html">
-          <div class="card">
-            <div class="info">
-              <div class="card-icon">
-                <ion-icon name="people-circle-outline" size="large"></ion-icon>
-              </div>
-              <span>Active Now</span><br />
-            <!-- <h1>300</h1> -->
-            <h1 class="time">
-            <?php
-            
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
-            
-            
-            ?>
-            </h1>
-            </div>
-          </a>
-          </div>
-      </div>
-      </div>
+</center>
       <div class="sub">
       <div class="card">
           <a href="viewhr.html">

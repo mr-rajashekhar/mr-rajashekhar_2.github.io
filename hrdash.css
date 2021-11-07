@@ -12,7 +12,7 @@ body {
   display: flex;
 }
 .sidebar {
-  width: 250px;
+  width: 200px;
   height: 800px;
   background: #fff;
 }
@@ -176,12 +176,12 @@ td {
   height: 60px;
   vertical-align: middle;
   background-color: rgb(133, 4, 255);
-  width: 250px;
+  width: 200px;
 }
 .info_1 {
-  font-size: 14px;
+  font-size: 8px;
   letter-spacing: 1px;
-  padding-top: 10px;
+  padding-top: 5px;
   font-family: "Zen Kurenaido", sans-serif;
 }
 .icon {
@@ -264,4 +264,88 @@ hr {
 }
 .time {
   font-size: 70px;
+}
+.info_12 {
+  width: 230px;
+  height: 300px;
+  padding: 30px;
+  background: rgb(133, 4, 255);
+  margin-right: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+.card-container {
+  background-color: rgb(133, 4, 255);
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  padding-top: 30px;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  margin-left: 40px;
+  height: 350px;
+  padding-bottom: 20px;
+}
+
+.card-container .pro {
+  color: #231e39;
+  background-color: #febb0b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.card-container .round {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+button.primary {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}
+
+.skills {
+  background-color: #1f1a36;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  border: 1px solid #2d2747;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+}
+.x {
+  margin-top: 5px;
+}
+.p {
+  margin-bottom: 3px;
 }
