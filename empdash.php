@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>HR Dashboard</title>
+    <title>Employee Dashboard</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="hrdash.css" />
+    <link rel="stylesheet" href="empdash.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
@@ -26,10 +26,10 @@
           </div>
         </a>
         <div class="imgcont">
-          <img src="hr1.png" width="100%" height="100%" />
+          <img src="male.png" width="100%" height="100%" />
         </div>
         <center>
-          <h2>HR Name</h2>
+          <h2>Empl Name</h2>
           <h4>Job Description</h4>
         </center>
         <ul>
@@ -41,7 +41,7 @@
       <div class="main">
         <div class="head">
           <div class="h-title">
-            <h1>HR's Glaza</h1>
+            <h1>Employee's Glaza</h1>
           </div>
         </div>
       </div>

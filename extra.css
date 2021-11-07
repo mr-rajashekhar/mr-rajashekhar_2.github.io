@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  height: 60px;
+  vertical-align: middle;
+
+  width: 250px;
+}
+.info {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.icon {
+  padding-top: 20px;
+  margin-right: 10px;
+}

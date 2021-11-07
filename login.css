@@ -72,21 +72,26 @@ span.psw {
 
 .form {
   background-color: white;
-  width: 400px;
+  /* width: 400px; */
   border-radius: 8px;
-  padding: 0px 40px;
+  /* padding: 0px 40px; */
+  padding-top: 30px;
   padding-bottom: 10px;
   box-shadow: 0 10px 15px rgba(0, 217, 255, 0.329);
   border: 5px solid blueviolet;
   /* padding: 60px;
   padding-top: 0;
   border-radius: 30px; */
+  height: 450px;
+  width: 420px;
 }
 .hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 650px;
+  width: 420px;
   /* height: 540px;
   width: 660px;
   margin-left: 30px;
@@ -116,10 +121,13 @@ h1 {
   margin-bottom: 50px;
 }
 .container {
+  align-items: center;
   position: relative;
   height: 20px;
-  width: 90%;
+  width: 210px;
   margin-bottom: 17px;
+  margin-left: 85px;
+  margin-right: 100px;
 }
 .input {
   position: absolute;
@@ -160,6 +168,7 @@ h1 {
   cursor: pointer;
   font-size: 16px;
   margin-top: 30px;
+  margin-right: 50px;
 }
 
 .submitBtn:hover {
