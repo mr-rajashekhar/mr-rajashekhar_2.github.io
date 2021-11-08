@@ -1,5 +1,6 @@
 
 <?php
+$tmp='<button class="primary">activity</button>';
 $temp='<!DOCTYPE html>
 <html>
   <head>
@@ -55,18 +56,14 @@ $temp='<!DOCTYPE html>
       <h3>vicky</h3>
       <h4>hai</h4>
       <div class="buttons">
+          <button class="primary">activity</button>
           <button class="primary">
-              Image
-          </button>
-          <button class="primary">
-              Location
+             salary
           </button>
       </div>
       <!-- <center>
         <div class="x"> -->
-      <button class="primary ">
-              Calculate Salary
-          </button>
+      
         <!-- </div>
       </center> -->
   </div>
@@ -161,6 +158,7 @@ if($role=="hr"){$sql="SELECT *
   $temp1= str_replace("%activetime%",$active,$temp1);
   $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);
   $temp1= str_replace("%payscale%",$payscale,$temp1);
+  $temp1=str_replace($tmp,"",$temp1);
   echo str_replace("hai","hr",$temp1);
 
 

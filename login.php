@@ -14,7 +14,7 @@ if(isset($_POST["hr_signin"])){
     $row = mysqli_fetch_assoc($res);
     $_SESSION['loggedin']=true;
     $_SESSION['id']=$row["id"];
-    $_SESSION["hr"]=true;
+    $_SESSION["role"]="hr";
     header('Location: hrdash.php');
     exit();
     
@@ -37,11 +37,11 @@ if(isset($_POST["hr_signin"])){
     $row = mysqli_fetch_assoc($res);
     $_SESSION['loggedin']=true;
     $_SESSION['id']=$row["id"];
-    $_SESSION["emp"]=true;
+    $_SESSION["role"]="emp";
     $id=$row["id"];
     $date = date('m/d/Y h:i:s a', time());
-    $sql="UPDATE  employees_data where  id='$id' SET Login='$date';";
-    header('Location: empdash.php');
+    $sql="UPDATE  employees_data  SET Login=now() where  id='$id' ;";
+    header('Location: photo.php');
     exit();
     
   
