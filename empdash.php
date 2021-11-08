@@ -7,7 +7,7 @@ $dir = './userimages/'.$id.'/';
 
  
     $img = $_POST['hidden'];
-    echo "hai";
+    // echo "hai";
     
     $img = str_replace('data:image/png;base64,', '', $img);
     $img = str_replace(' ', '+', $img);
@@ -188,7 +188,7 @@ $dir = './userimages/'.$id.'/';
                $sql="SELECT * FROM employees_data where id ='$id' ";
                $res= $connect -> query($sql);
                $row = mysqli_fetch_assoc($res);
-               $payscale=$row["Days_attented"];
+               $payscale=$row["Hours_active"];
                echo $payscale;
               
               
