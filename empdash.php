@@ -109,7 +109,7 @@ $dir = './userimages/';
           </center>
           <ul>
             <li class="active">HOME</li>
-            <li>LOGOUT</li>
+            <a href="photologout.php"><li>LOGOUT</li></a>
           </ul>
         </div>
         <div class="main">
