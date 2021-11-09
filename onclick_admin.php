@@ -48,7 +48,7 @@ $temp='<!DOCTYPE html>
           </li></a>
           <a href="adduser.html">  <li><ion-icon name="person-add-sharp" size="large"></ion-icon></li></a>
           <a href="view.html"><li class="active"><ion-icon name="eye-sharp" size="large">VIEW</ion-icon></li></a>
-          <li><ion-icon name="log-out-sharp" size="large"></ion-icon></li>
+          <a href="admin.php"><li><ion-icon name="log-out-sharp" size="large"></ion-icon></li></a>
         </ul>
       </div>
       <!-- <div class="sidebar1">

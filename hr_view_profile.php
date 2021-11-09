@@ -41,7 +41,7 @@
         <ul>
           <a href="hrdash.php"><li>HOME</li></a>
         <a href="hr_view_profile.php"><li class="active">VIEW PROFILE</li></a>
-          <li>LOGOUT</li>
+        <a href="login.html"><li>LOGOUT</li></a>
         </ul>
       </div>
       <div class="main">

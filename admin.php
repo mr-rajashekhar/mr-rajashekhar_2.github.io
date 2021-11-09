@@ -39,7 +39,7 @@ if(isset($_POST["submit"])){
             placeholder="Enter Username"
             name="uname"
             required
-            style="background-color: blanchedalmond"
+       
             width="50px"
           />
 
@@ -58,10 +58,10 @@ if(isset($_POST["submit"])){
           </label>
         </div>
 
-        <div class="container" style="background-color: #f1f1f1">
+        <!-- <div class="container" style="background-color: #f1f1f1">
           <button type="button" class="cancelbtn">Cancel</button>
           <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
+        </div> -->
       </form>
     </div>
     <div class="contact">

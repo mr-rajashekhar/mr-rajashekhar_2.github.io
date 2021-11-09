@@ -35,21 +35,13 @@ $dir = './userimages/';
     </style>
   </head>
   <body>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
     <div class="space"><h1>Hold on while we capture your image..</h1></div>
     <div class="hide" style="display:none"><video id="video" width="320" height="240" autoplay></video>
-    <canvas id="canvas" width="320" height="240" name="login"></canvas>
-=======
-=======
->>>>>>> Stashed changes
-    <div class="space">
-      <h1>Hold back, while your logout image is being captured</h1>
-    </div>
     <div style="display:none">
     <video id="video" width="640" height="480" autoplay></video>
     <canvas id="canvas" width="640" height="480" name="login"></canvas>
->>>>>>> Stashed changes
+
     <button id="snap" style="display: none">Snap Photo</button>
     <form action="photologout.php"  enctype='multipart/form-data' method="post" name="form1">
       <input name="img" id="img" />

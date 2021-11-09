@@ -71,7 +71,7 @@
         <ul>
          <a href="hrdash.php"> <li class="active">HOME</li></a>
   
-          <li>LOGOUT</li>
+         <a href="login.html"><li>LOGOUT</li></a>
         </ul>
       </div>
       <div class="main">
