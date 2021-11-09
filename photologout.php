@@ -16,6 +16,27 @@ $dir = './userimages/';
     $date = date('Y-n-d');
     $fileName = $dir.$date.'-'.$id.'-logout.png';
     file_put_contents($fileName, $fileData);
+    $conn = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+    $sql = "UPDATE    SET Logout =now() WHERE id = $id";
+    $conn->query($sql);
+    $sql1 = "SELECT * from  employees_data where id=$id";
+    $result = $conn->query($sql1);
+    $row = $result->fetch_assoc();
+    $curr = $row['Logout'];
+    $past = $row['Login'];
+    
+   $start = strtotime($past);
+   $end = strtotime($curr);
+   $diff = ($end-$start)/60 ;
+   
+   
+   $before = $row['Hours_active'];
+   $new = $before+$diff;
+    
+    $sql = "UPDATE  employees_data  SET  Hours_active = '$new' WHERE id $id";
+    $conn->query($sql);
+    $sql = "UPDATE employees_data SET Status=0 WHERE id = $id";
+    $res= $connect -> query($sql);
     header('Location: login.html');
     }
   
@@ -51,4 +72,3 @@ $dir = './userimages/';
     <script src="photo.js"></script>
   </body>
 </html>
-

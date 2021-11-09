@@ -26,15 +26,17 @@ echo $date;
   $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
   $sql="SELECT * FROM activity where id='$id' and date='$date'";
   $res= $connect -> query($sql);
-  if($res){
+  if($res->num_rows!=0){
     $sql = "UPDATE activity
     SET latitude= '$latitude' ,longitude = '$longitude'
     WHERE id = '$id' and date='$date' " ;
     $res= $connect -> query($sql);
+    echo"hello";
   }
   else{
     $sql = "INSERT into activity (id,latitude,longitude,date) VALUES ('$id','$latitude','$longitude','$date')";
     $res= $connect -> query($sql);
+    echo "hai";
   }
 
 

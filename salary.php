@@ -104,7 +104,7 @@ else{
     $str = strtotime($logintime);
 	 $end = strtotime($time);
 	 $diff = ($end-$str)/60;
-   echo " $diff ";
+   
    $active=$row["Hours_active"];
    $payscale=$row["Salary"];
    $pay=($active)*$payscale;

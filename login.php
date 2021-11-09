@@ -17,6 +17,8 @@ if(isset($_POST["hr_signin"])){
     $_SESSION["role"]="hr";
     $sql="UPDATE  hr  SET Login=now() where  id='$id' ";
     $res= $connect -> query($sql);
+    $sql = "UPDATE hr SET Status=1 WHERE id = $id";
+    $res= $connect -> query($sql);
     header('Location: hrdash.php');
     exit();
     
@@ -45,6 +47,8 @@ if(isset($_POST["hr_signin"])){
     echo "$date ";
     echo $id;
     $sql="UPDATE  employees_data  SET Login=now() where  id='$id' ";
+    $res= $connect -> query($sql);
+    $sql = "UPDATE employees_data SET Status=1 WHERE id = $id";
     $res= $connect -> query($sql);
     header('Location: photologin.php');
     exit();
