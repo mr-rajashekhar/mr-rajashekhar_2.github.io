@@ -1,0 +1,32 @@
+body {
+  background-color: rgba(87, 82, 82, 0.534);
+}
+
+.heading {
+  background-color: blueviolet;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 0px;
+}
+span {
+  font-size: 20px;
+}
+.box {
+  background-color: rgba(0, 0, 0, 0.233);
+  color: blanchedalmond;
+  width: 400px;
+  height: 120px;
+  border-color: blanchedalmond;
+  border-width: 3px;
+  border-radius: 12px;
+  padding: 5px;
+  margin-top: 20px;
+  text-align: center;
+}
+h3 {
+  font-size: 30px;
+}

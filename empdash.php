@@ -43,10 +43,12 @@ $dir = './userimages/';
 /* .circular{
   border-radius: 25px;
 } */
-/* .imgcont {
+.imgcont {
   margin-top: 20px;
-  border-radius: 50px;
-} */
+  border-radius: 60px;
+  height:120px;
+  weight:120px;
+}
       </style>
     </head>
     <body>
@@ -63,20 +65,8 @@ $dir = './userimages/';
             </div>
           </a>
           <div class="imgcont" style="margin-top: 20px;
-  border-radius: 50px;">
+  border-radius: 50px; ">
             <img src=
-            <?php
-            
-            $id=$_SESSION["id"];
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT * FROM employees_data where id ='$id' ";
-            $res= $connect -> query($sql);
-            $row = mysqli_fetch_assoc($res);
-            $name=$row["Image"];
-            $img="./employee_images/".$name;
-            echo $img;
-            
-            ?>
             
             
              width="100%" height="100%" />
