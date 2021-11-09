@@ -20,6 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="index.css" />
     <title>Our Team</title>
   </head>
 
@@ -160,46 +161,68 @@
         various asset classes and create your customised portfolio. All from one
         platform.
       </p>
-      <!-- <div class="products">
-        <div class="options">
-          <div role="tablist" class="names">
-            <div role="tab" data-tab-value="1" data-target="1" class="name">
-              Stocks
-            </div>
-            <div role="tab" data-tab-value="1" data-target="1" class="name">
-              Mutual Funds
-            </div>
-            <div role="tab" data-tab-value="1" data-target="1" class="name">
-              IPOs
-              <span class="pill" style="width: 74px; left: 302px"></span>
-            </div>
-          </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="1.jpg" style="width: 100%" />
+          <div class="text">Caption Text</div>
         </div>
-        <div class="slide">
-          <button onlick="back()" class="back">
-            <img src="la.png" alt="left-arrow" height="10%" width="10%" />
-          </button>
-          <div role="tabpanel" data-target="1" class="desc">
-            <div class="desc-row">
-              <h1 class="heading">Stocks</h1>
-              <ul class="points">
-                <li class="fs-20">
-                  <img src="tick.jpg" height="10%" width="10%" />
-                  "Easy, fast & simple interface"
-                </li>
-                <li class="fs-20">
-                  <img src="tick.jpg" height="10%" width="10%" />
-                  "Upto $20/order on Equity"
-                </li>
-                <li class="fs-20">
-                  <img src="tick.jpg" height="10%" width="10%" />
-                  "100+ charts with 250+ indicatore"
-                </li>
-              </ul>
-            </div>
-          </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="2.jpg" style="width: 100%" />
+          <div class="text">Caption Two</div>
         </div>
-      </div> -->
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="3.jpg" style="width: 100%" />
+          <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
     </div>
   </body>
 </html>
