@@ -11,12 +11,6 @@ body {
   margin: auto;
   display: flex;
 }
-.sidebar {
-  width: 200px;
-  height: 800px;
-  background: #fff;
-  position: fixed;
-}
 .sidebar ul {
   margin-top: 50px;
 }

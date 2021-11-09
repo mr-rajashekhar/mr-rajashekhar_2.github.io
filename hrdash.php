@@ -18,6 +18,18 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .sidebar {
+  width: 200px;
+  height: 800px;
+  background: #fff;
+  position: fixed;
+  margin-right: 200px;
+}
+.main{
+  margin-left:200px;
+}
+    </style>
   </head>
   <body>
     <div class="wrap">
