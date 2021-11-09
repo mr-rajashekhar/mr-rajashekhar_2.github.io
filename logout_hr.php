@@ -21,7 +21,7 @@ $conn = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11
     $sql = "UPDATE  hr  SET  Hours_active = '$new' WHERE id $id";
     $conn->query($sql);
     $sql = "UPDATE hr SET Status=0 WHERE id = $id";
-    $res= $connect -> query($sql);
+    $res= $conn -> query($sql);
     header('Location: login.html');
     
 
