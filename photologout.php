@@ -36,10 +36,13 @@ $dir = './userimages/';
   </head>
   <body>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <div class="space"><h1>Hold on while we capture your image..</h1></div>
     <div class="hide" style="display:none"><video id="video" width="320" height="240" autoplay></video>
     <canvas id="canvas" width="320" height="240" name="login"></canvas>
 =======
+=======
+>>>>>>> Stashed changes
     <div class="space">
       <h1>Hold back, while your logout image is being captured</h1>
     </div>
