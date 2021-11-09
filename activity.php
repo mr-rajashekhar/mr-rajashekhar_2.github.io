@@ -27,8 +27,8 @@
   <td>%latitude%</td>
   <td>%longitude%</td>
   <td><button onclick="myMap(%latitude%,%longitude%)">map</button></td>
-  <td><a href="userimages/%id%/%date%-%id%-login.png"><button>Show Image</button></a></td>
-  <td><a href="userimages/%id%/%date%-%id%-logout.png"><button>Show Image</button></a></td>
+  <td><a href="userimages/%date%-%id%-login.png"><button>Show Image</button></a></td>
+  <td><a href="userimages/%date%-%id%-logout.png"><button>Show Image</button></a></td>
 </tr>';
   $id=1;
   

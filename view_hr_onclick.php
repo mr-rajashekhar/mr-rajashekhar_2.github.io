@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+<?php
+$temp='<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -51,20 +53,7 @@
           <h2>
 
          
-          <?php
-          SESSION_start();
-          $id=$_SESSION["id"];
-          $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-          $sql="SELECT * FROM hr where id ='$id' ";
-          $res= $connect -> query($sql);
-          $row = mysqli_fetch_assoc($res);
-          $name=$row["First_Name"];
-          echo $name;
-          
-          
-          
-          
-          ?>
+          %hrname%
 
           </h2>
           <h4>HR</h4>
@@ -78,29 +67,25 @@
       <div class="main">
         <div class="head">
           <div class="h-title">
-            <h3>HR's Glaza/Employee Details</h3>
+            <h3>HRs Glaza/Employee Details</h3>
           </div>
         </div>
        <center>
         <div class="card-container">
     <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-    <h3>Ricky Park</h3>
-    <h6>New York</h6>
-    <p>User interface designer and <br /> front-end developer</p>
+    <h3>vicky</h3>
+    <h6>hai
+      
+    </h6>
     <div class="buttons">
+        <a href="activity.php?id=%id%"><button class="primary">
+            activity
+        </button></a>
         <button class="primary">
-            Image
-        </button>
-        <button class="primary">
-            Location
+            salary
         </button>
     </div>
-    <center>
-      <div class="x">
-    <button class="primary ">
-            Calculate Salary
-        </button></div>
-    </center>
+    
 </div>
 </center>
       <div class="sub">
@@ -114,17 +99,7 @@
               <span>Pay Scale/1hr</span><br />
             <!-- <h1>300</h1> -->
             <h1 class="time">
-            <?php
-            
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
-            
-            
-            ?>
+            %pay%
             </h1>
             </div>
           </a>
@@ -140,17 +115,7 @@
               <span>Last Login</span><br />
             <!-- <h1>300</h1> -->
             <h1 class="time">
-            <?php
-            
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
-            
-            
-            ?>
+            %lst%
             </h1>
             </div>
           </a>
@@ -166,17 +131,7 @@
               <span>Current Active Time</span><br />
             <!-- <h1>300</h1> -->
             <h1 class="time">
-            <?php
-            
-            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-            $sql="SELECT *
-            FROM hr; ";
-            $res= $connect -> query($sql);
-            $cnt=$res->num_rows;
-            echo"$cnt";
-            
-            
-            ?>
+            %active%
             </h1>
             </div>
           </a>
@@ -193,4 +148,47 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
   </body>
-</html>
+</html>';
+ SESSION_start();
+ $id=$_SESSION["id"];
+ $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+$sql="SELECT * FROM hr where id ='$id' ";
+$res= $connect -> query($sql);
+$row = mysqli_fetch_assoc($res);
+$name=$row["First_Name"];
+$temp= str_replace("%hrname%",$name,$temp);
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+  $url = "https://";   
+else  
+  $url = "http://";   
+// Append the host(domain name, ip) to the URL.   
+$url.= $_SERVER['HTTP_HOST'];   
+
+// Append the requested resource location to the URL   
+$url.= $_SERVER['REQUEST_URI'];    
+$url_components = parse_url($url);
+ 
+// Use parse_str() function to parse the
+// string passed via URL
+parse_str($url_components['query'], $params);
+$id=$params["id"];
+$role=$params["role"];
+$temp= str_replace("%id%",$id,$temp);
+$sql="SELECT *
+FROM employees_data where id='$id'; ";  
+$res= $connect -> query($sql);  
+$data = $res -> fetch_assoc();
+$name=$data["First_Name"];
+$temp1= str_replace("vicky",$name,$temp);
+ $active=$data["Hours_active"];
+ $payscale=$data["Salary"];
+ $lastlogin=$data["Login"];
+ $temp1= str_replace("%active%",$active,$temp1);
+ $temp1= str_replace("%lst%",$lastlogin,$temp1);
+ $temp1= str_replace("%pay%",$payscale,$temp1);
+echo $temp1;
+          
+          
+          
+          
+ ?>

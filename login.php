@@ -1,7 +1,7 @@
 <?php
 
 $login = file_get_contents("login_w.html");
-// connect to database
+
 $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
 // hr signin-------------
 if(isset($_POST["hr_signin"])){
@@ -40,7 +40,10 @@ if(isset($_POST["hr_signin"])){
     $_SESSION["role"]="emp";
     $id=$row["id"];
     $date = date('m/d/Y h:i:s a', time());
-    $sql="UPDATE  employees_data  SET Login=now() where  id='$id' ;";
+    echo "$date ";
+    echo $id;
+    $sql="UPDATE  employees_data  SET Login=now() where  id='$id' ";
+    $res= $connect -> query($sql);
     header('Location: photologin.php');
     exit();
     

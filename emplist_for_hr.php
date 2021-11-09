@@ -66,7 +66,7 @@
 </div>
           <div class="sub">
        <?php
-       $temp='<a href="onclick_admin.php?id=xy&&role=employee"><div class="card-container1">
+       $temp='<a href="view_hr_onclick.php?id=xy&&role=employee"><div class="card-container1">
        <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
        <h3>vicky</h3>
        <p>id: hai</p>
