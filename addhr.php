@@ -17,6 +17,14 @@
       rel="stylesheet"
     />
    <title>Add_New_Employe</title>
+   <style>
+     .sidebar{
+       position: fixed;
+     }
+     .main{
+       margin-left:100px;
+     }
+   </style>
   </head>
   <body>
     <div class="wrap">
@@ -26,14 +34,14 @@
           <li >
             <ion-icon name="home" size="large"></ion-icon>
           </li></a>
-          <a href="adduser.html" >  <li ><ion-icon name="person-add-sharp" size="large"></ion-icon></li></a>
+          <a href="adduser.html" >  <li class="active"><ion-icon name="person-add-sharp" size="large"></ion-icon></li></a>
          <a href="view .html"> <li><ion-icon name="eye-sharp" size="large">VIEW</ion-icon></li></a>
           <li><ion-icon name="log-out-sharp" size="large"></ion-icon></li>
         </ul>
       </div>
       <div class="main">
         <div class="h-title">
-          <h2>Add a New HR</h2>
+          <h2 style="margin-right: 200px;">Add a New HR</h2>
         </div>
         <div class="head">
           <div class="hr">
@@ -79,16 +87,21 @@
                 <input type="text" class="input" placeholder="a" name="Payscale"/>
                 <label for="" class="label">Payscale/1hr</label>
               </div>
+              
               <div class="container">
                 <input type="text" class="input" placeholder="a" name="password">
                 <label for="" class="label">Password</label>
               </div>
+           
 <!--         
               <div class="container">
                 <input type="text" class="input" placeholder="a" name="password">
                 <label for="" class="label">Confirm Password</label>
               </div> -->
+              <h4>Upload Profile Photo</h4>
+              <input type="file" class="input1" id="myFile" name="filename">
               <input type="submit" class="submitBtn" value="Add" />
+              
             </form>
           </div>
        
