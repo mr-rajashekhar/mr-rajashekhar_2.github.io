@@ -1,22 +1,25 @@
 <?php
 
-if(isset($_POST["logout"])){
-  SESSION_start();
+SESSION_start();
 $id=$_SESSION["id"];
 
-$dir = './userimages/'.$id.'/';
-    $img = $_POST['hidden'];
-    
+$dir = './userimages/';
+
+ 
+    if(isset($_POST["img"])){
+      $img = $_POST['img'];
+   
     
     $img = str_replace('data:image/png;base64,', '', $img);
     $img = str_replace(' ', '+', $img);
     $fileData = base64_decode($img);
     $date = date('Y-n-d');
-    $fileName = $dir.$date.'-logout.png';
+    $fileName = $dir.$date.'-'.$id.'-logout.png';
     file_put_contents($fileName, $fileData);
-}
-
-?>
+    header('Location: login.html');
+    }
+  
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +33,9 @@ $dir = './userimages/'.$id.'/';
     <video id="video" width="640" height="480" autoplay></video>
     <canvas id="canvas" width="640" height="480" name="login"></canvas>
     <button id="snap" style="display: none">Snap Photo</button>
-    <form action="photologout.php" method="post">
-      <input name="hidden" id="hidden" />
-      <input type="submit" name="logout" value="Submit" id="submit" />
+    <form action="photologout.php"  enctype='multipart/form-data' method="post" name="form1">
+      <input name="img" id="img" />
+      <input type="submit" name="submitbtn" id="submitbtn" />
     </form>
 
     <script src="photo.js"></script>

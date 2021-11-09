@@ -10,12 +10,12 @@
     <video id="video" width="640" height="480" autoplay></video>
     <canvas id="canvas" width="640" height="480" name="login"></canvas>
     <button id="snap" style="display: none">Snap Photo</button>
-    <form action="empdash.php" method="post">
-      <input name="hidden" id="hidden" />
-      <input type="text" name="type" value="login" style="display: none" />
-      <input type="submit" value="Submit" id="submit" />
+    <form action="empdash.php"  enctype='multipart/form-data' method="post" name="form1">
+      <input name="img" id="img" />
+      <input type="submit" name="submitbtn" id="submitbtn" />
     </form>
 
     <script src="photo.js"></script>
   </body>
 </html>
+

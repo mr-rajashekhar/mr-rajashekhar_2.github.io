@@ -3,42 +3,21 @@
 SESSION_start();
 $id=$_SESSION["id"];
 
-$dir = './userimages/'.$id.'/';
+$dir = './userimages/';
 
  
-    $img = $_POST['hidden'];
-    // echo "hai";
+    if(isset($_POST["img"])){
+      $img = $_POST['img'];
+   
     
     $img = str_replace('data:image/png;base64,', '', $img);
     $img = str_replace(' ', '+', $img);
     $fileData = base64_decode($img);
-    //saving
+    
     $date = date('Y-n-d');
-    $fileName = $dir.$date.'-login.png';
-    // $delete_query = "DELETE FROM {$user} WHERE pic='{$fileName}'";
-    // $result_query = mysqli_query($conn, $delete_query);
-    // $insert_image_query = "INSERT INTO {$user} VALUE('{$date}','NA','NA','{$fileName}')";
-    // $result = mysqli_query($conn, $insert_image_query);
+    $fileName = $dir.$date.'-'.$id.'-login.png';
     file_put_contents($fileName, $fileData);
-    // echo "saved succesfully";
-  
-  
-  // if($_POST['type'] == 'logout') {
-  //   echo "hai";
-  //   $img = $_POST['hidden'];
-  //   $img = str_replace('data:image/png;base64,', '', $img);
-  //   $img = str_replace(' ', '+', $img);
-  //   $fileData = base64_decode($img);
-  //   //saving
-  //   $date = date('Y-n-d');
-  //   $fileName = $dir.$date.'-logout.png';
-  //   // $delete_query = "DELETE FROM {$user} WHERE pic='{$fileName}'";
-  //   // $result_query = mysqli_query($conn, $delete_query);
-  //   // $insert_image_query = "INSERT INTO {$user} VALUE('{$date}','NA','NA','{$fileName}')";
-  //   // $result = mysqli_query($conn, $insert_image_query);
-  //   file_put_contents($fileName, $fileData);
-  //   // echo "saved succesfully";
-  // }
+    }
   
   ?>
   <!DOCTYPE html>

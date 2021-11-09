@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="activity.css">
 </head>
 <body>
-<div class="y">
+<div class="y" id="googleMap">
 
 </div>
 <div class="x">
@@ -18,26 +18,56 @@
     <th>Login Image</th>
     <th>Logout Image</th>
   </tr>
-  <tr>
-    <td>0</td>
-    <td>09.11.2021</td>
-    <td>11111111111</td>
-    <td>11111111111</td>
-    <td><button>map</button></td>
-    <td><button>Show Image</button></td>
-    <td><button>Show Image</button></td>
-  </tr>
-  <tr>
-    <td>0</td>
-    <td>09.11.2021</td>
-    <td>11111111111</td>
-    <td>11111111111</td>
-    <td><button>map</button></td>
-    <td><button>Show Image</button></td>
-    <td><button>Show Image</button></td>
-  </tr>
+ 
+  <?php
+  
+  $temp=' <tr>
+  <td>%s%</td>
+  <td>%date%</td>
+  <td>%latitude%</td>
+  <td>%longitude%</td>
+  <td><button onclick="myMap(%latitude%,%longitude%)">map</button></td>
+  <td><a href="userimages/%id%/%date%-%id%-login.png"><button>Show Image</button></a></td>
+  <td><a href="userimages/%id%/%date%-%id%-logout.png"><button>Show Image</button></a></td>
+</tr>';
+  $id=1;
+  
+  $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+  $sql="SELECT * FROM activity where id ='$id' ";
+  $res= $connect -> query($sql);
+  $s=1;
+  if($res->num_rows !=0){
+        
+    while($data = $res -> fetch_assoc()){
+        $latitude=$data["latitude"];
+        $longitude=$data["longitude"];
+        $date=$data["date"];
+        $temp1= str_replace("%s%",$s,$temp);
+        $temp1= str_replace("%date%",$date,$temp1);
+        $temp1= str_replace("%id%",$id,$temp1);
+        $temp1= str_replace("%latitude%",$latitude,$temp1);
+        $temp1= str_replace("%longitude%",$longitude,$temp1);
+        echo $temp1;
+        $s++;
+        
+    }
+
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  ?>
+  
 </table>
 </div>
+<script src="activity.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq7KUGe0CHwd33sFmugCmEcz1Jjz0fJIA&callback=myMap"></script>
 </body>
 </html>
 

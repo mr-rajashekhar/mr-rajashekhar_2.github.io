@@ -18,17 +18,19 @@ window.onload = function () {
     context.drawImage(video, 0, 0, 640, 480);
     var dataURL = canvas.toDataURL("image/png");
     console.log(dataURL);
-    document.getElementById("hidden").value = dataURL;
-    document.getElementById("submit").click;
+    document.getElementById("img").value = dataURL;
+    // document.forms["form1"].submit();
   });
   var n = 2;
   (function submit() {
     if (n > 0) {
-      snap.click();
       setTimeout(submit, 2000);
       n--;
     }
+    snap.click();
   })();
-
-  // var dataURL = canvas.toDataURL("image/png");
+  setInterval(function () {
+    // document.forms["form1"].submit();
+    document.getElementById("submitbtn").click();
+  }, 5000);
 };

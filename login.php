@@ -41,7 +41,7 @@ if(isset($_POST["hr_signin"])){
     $id=$row["id"];
     $date = date('m/d/Y h:i:s a', time());
     $sql="UPDATE  employees_data  SET Login=now() where  id='$id' ;";
-    header('Location: photo.php');
+    header('Location: photologin.php');
     exit();
     
   
