@@ -31,6 +31,10 @@ $temp='<!DOCTYPE html>
         cursor: pointer;
        width: 90px;
       }
+      .imgcontainer{
+        height:5px;
+        width: 5px;
+      }
     </style>
   </head>
   <body>
@@ -67,7 +71,8 @@ $temp='<!DOCTYPE html>
  <center>
       
         <div class="card-container">
-      <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+       <div class="imagecontainer"><img class="round" src="./%role%_images/%img%" height=150px width=150px alt="user" /></div>
+        
       <h3>vicky</h3>
       <h4>hai</h4>
       <div class="buttons">
@@ -216,9 +221,12 @@ if($role=="hr")
   $active=$data["Hours_active"];
   $payscale=$data["Salary"];
   $lastlogin=$data["Login"];
+  $img=$data["Image"];
+  $temp1= str_replace("%role%",$role,$temp1);
   $temp1= str_replace("%activetime%",$active,$temp1);
   $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);
   $temp1= str_replace("%payscale%",$payscale,$temp1);
+  $temp1= str_replace("%img%",$img,$temp1);
   $temp1=str_replace($tmp,"",$temp1);
   echo str_replace("hai","hr",$temp1);
 
@@ -234,10 +242,13 @@ $temp1= str_replace("vicky",$name,$temp);
  $active=$data["Hours_active"];
  $payscale=$data["Salary"];
  $lastlogin=$data["Login"];
+ $img=$data["Image"];
+ $temp1= str_replace("%role%","employee",$temp1);
  $temp1= str_replace("%activetime%",$active,$temp1);
  $temp1= str_replace("%id%",$id,$temp1);
  $temp1= str_replace("%role%",$params["role"],$temp1);
  $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);
+ $temp1= str_replace("%img%",$img,$temp1);
  $temp1= str_replace("%payscale%",$payscale,$temp1);
  echo str_replace("hai","employee",$temp1);
 // echo $lastlogin;
