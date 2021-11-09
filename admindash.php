@@ -37,9 +37,9 @@
             <h2>Dashboard</h2>
             <span>Admin Page</span>
           </div>
-          <div class="search">
+          <!-- <div class="search">
             <input type="search" placeholder="Search" />
-          </div>
+          </div> -->
         </div>
         <div class="board">
           <a href="viewhr.php">
