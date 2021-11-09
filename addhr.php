@@ -45,11 +45,7 @@
         </div>
         <div class="head">
           <div class="hr">
-<<<<<<< Updated upstream
             <form action="addhr.php" class="form" method="post" enctype="multipart/form-data">
-=======
-            <form action="addhr.php" method="post" class="form">
->>>>>>> Stashed changes
               <h2>Fill details</h2>
               <!-- <div class="imgcontainer">
                 <img src="hr.png" alt="Avatar" class="avatar" />
@@ -106,11 +102,7 @@
               </div> -->
               <h4>Upload Profile Photo</h4>
               <input type="file" class="input1" id="myFile" name="filename">
-<<<<<<< Updated upstream
               <input type="submit" class="submitBtn" value="Add" name="submit" />
-=======
-              <input type="submit" class="submitBtn" name="submit" value="Add" />
->>>>>>> Stashed changes
               
             </form>
           </div>
@@ -126,7 +118,6 @@
     ></script>
   </body>
 </html>
-<<<<<<< Updated upstream
 <?php
 $conn = new mysqli("localhost","root","","company");
 //$conn = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
@@ -199,8 +190,3 @@ if($add_new){
 	else echo "Image can't be uploaded into the database" . "<br>";
 	
 }
-=======
-
-
-
->>>>>>> Stashed changes

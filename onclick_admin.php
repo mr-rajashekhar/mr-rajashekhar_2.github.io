@@ -11,12 +11,26 @@ $temp='<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="onclick_hr.css" />
+    <link rel="stylesheet" href="login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <style>
+    .hr{
+      margin-left:200px;}
+      button {
+        background-color: purple;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+       width: 90px;
+      }
+    </style>
   </head>
   <body>
     <div class="wrap">
@@ -72,7 +86,6 @@ $temp='<!DOCTYPE html>
 </div>
         <div class="sub">
         <div class="card">
-    
             <div class="info">
               <div class="card-icon">
                 <ion-icon name="people-circle-outline" size="large"></ion-icon>
@@ -83,11 +96,8 @@ $temp='<!DOCTYPE html>
          %payscale%
             </h1>
             </div>
-       
           </div>
           <div class="card">
- 
-        
             <div class="info">
               <div class="card-icon">
                 <ion-icon name="people-circle-outline" size="large"></ion-icon>
@@ -98,12 +108,8 @@ $temp='<!DOCTYPE html>
             %lastlogin%
             </h1>
             </div>
-
           </div>
-
           <div class="card">
- 
-       
             <div class="info">
               <div class="card-icon">
                 <ion-icon name="people-circle-outline" size="large"></ion-icon>
@@ -114,10 +120,37 @@ $temp='<!DOCTYPE html>
             %activetime%
             </h1>
             </div>
-
+          </div>
+          
+          </div>
+          <center>  
+          <div class="hr">
+         
+        <form action="login.php" method="post" class="form" style="height:300px;"> <center><h3>Change Password</h3></center>
+          <div class="container" style="height:40px;">
+            <input type="text" name="emp_uname" class="input" placeholder="a" />
+            <label for="" class="label">New Password</label>
           </div>
 
+          <div class="container" style="height:40px;">
+            <input
+              type="password"
+              name="emp_pwd"
+              class="input"
+              placeholder="a"
+            />
+            <label for="" class="label">Confirm Password</label>
+          </div>
+          <input
+            type="submit"
+            name="emp_signin"
+            class="submitBtn"
+            value="Sign in"
+          />
+        </form>
+       
     </div>
+    </center>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

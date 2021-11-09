@@ -90,7 +90,7 @@ $temp='<!DOCTYPE html>
 </center>
       <div class="sub">
       <div class="card">
-          <a href="viewhr.html">
+  
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -102,11 +102,11 @@ $temp='<!DOCTYPE html>
             %pay%
             </h1>
             </div>
-          </a>
+     
           </div>
           </div>
           <div class="card">
-          <a href="viewhr.html">
+
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -118,11 +118,10 @@ $temp='<!DOCTYPE html>
             %lst%
             </h1>
             </div>
-          </a>
+
           </div>
           </div>
           <div class="card">
-          <a href="viewhr.html">
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -134,7 +133,7 @@ $temp='<!DOCTYPE html>
             %active%
             </h1>
             </div>
-          </a>
+         
           </div>
           </div>
       </div>
