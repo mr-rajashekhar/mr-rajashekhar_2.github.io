@@ -62,7 +62,7 @@
        <div class="tiles">
        <?php
        $temp='<a href="onclick_admin.php?id=xy&&role=employee"><div class="card-container">
-       <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+       <img class="round" src="./employee_images/%img%" height=150px width=150px alt="user" />
        <h3>vicky</h3>
        <p>id: hai</p>
       </div></a>';
@@ -91,8 +91,10 @@
         while($data = $res -> fetch_assoc()){
           $name=$data["First_Name"];
           $id =$data["id"];
+          $img=$data["Image"];
             $temp1= str_replace("vicky",$name,$temp);
             $temp1= str_replace("hai",$id,$temp1);
+            $temp1= str_replace("%img%",$img,$temp1);
             echo str_replace("xy",$id,$temp1);
 
         }
@@ -108,8 +110,10 @@
         while($data = $res -> fetch_assoc()){
           $name=$data["First_Name"];
           $id =$data["id"];
+          $img=$data["Image"];
             $temp1= str_replace("vicky",$name,$temp);
             $temp1= str_replace("hai",$id,$temp1);
+            $temp1= str_replace("%img%",$img,$temp1);
             echo str_replace("xy",$id,$temp1);
 
         }

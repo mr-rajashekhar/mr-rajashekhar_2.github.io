@@ -42,7 +42,7 @@ $temp='<!DOCTYPE html>
     <div class="wrap">
       <div class="sidebar">
         <ul>
-        <a href="admindash.php"> 
+        <a href="admindash.php">
           <li >
             <ion-icon name="home" size="large"></ion-icon>
           </li></a>
@@ -70,9 +70,10 @@ $temp='<!DOCTYPE html>
         </div>
         <div class="sub">
  <center>
-      
+
         <div class="card-container">
-      <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+       <div class="imagecontainer"><img class="round" src="./%role%_images/%img%" height=150px width=150px alt="user" /></div>
+
       <h3>vicky</h3>
       <h4>hai</h4>
       <center>
@@ -85,11 +86,11 @@ $temp='<!DOCTYPE html>
       </center>
       <!-- <center>
         <div class="x"> -->
-      
+
         <!-- </div>
       </center> -->
   </div>
- 
+
 </center>
 </div>
         <div class="sub">
@@ -129,11 +130,11 @@ $temp='<!DOCTYPE html>
             </h1>
             </div>
           </div>
-          
+
           </div>
-          <center>  
+          <center>
           <div class="hr1">
-         
+
         <form action="anclick_admin.php/id=%id%&role=%role%" method="post" class="form" style="height:200px;"> <center><h3>Change Password</h3></center>
           <div class="container" style="height:40px;">
             <input type="text" name="pwd" class="input" placeholder="a" />
@@ -146,7 +147,7 @@ $temp='<!DOCTYPE html>
             value="change"
           />
         </form>
-       
+
     </div>
     </center>
     <script
@@ -160,17 +161,17 @@ $temp='<!DOCTYPE html>
   </body>
 </html>';
 
-if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
-  $url = "https://";   
-else  
-  $url = "http://";   
-// Append the host(domain name, ip) to the URL.   
-$url.= $_SERVER['HTTP_HOST'];   
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+  $url = "https://";
+else
+  $url = "http://";
+// Append the host(domain name, ip) to the URL.
+$url.= $_SERVER['HTTP_HOST'];
 
-// Append the requested resource location to the URL   
-$url.= $_SERVER['REQUEST_URI'];    
+// Append the requested resource location to the URL
+$url.= $_SERVER['REQUEST_URI'];
 $url_components = parse_url($url);
- 
+
 // Use parse_str() function to parse the
 // string passed via URL
 parse_str($url_components['query'], $params);
@@ -178,7 +179,7 @@ $id=$params["id"];
 $role=$params["role"];
 $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
 if(isset($_POST["changeBtn"])){
- 
+
 $new_password=$_POST["pwd"];
 if($params["role"]=="hr"){
   $sql = "UPDATE hr
@@ -191,7 +192,7 @@ else{
 	WHERE id = '$id'" ;
 }
 
-$res= $connect -> query($sql); 
+$res= $connect -> query($sql);
 
 
 
@@ -201,21 +202,24 @@ $res= $connect -> query($sql);
 
 
 }
-     
+
 if($role=="hr")
 {
   $sql="SELECT *
-  FROM hr where id='$id'; "; 
-  $res= $connect -> query($sql);  
+  FROM hr where id='$id'; ";
+  $res= $connect -> query($sql);
   $data = $res -> fetch_assoc();
   $name=$data["First_Name"];
   $temp1= str_replace("vicky",$name,$temp);
   $active=$data["Hours_active"];
   $payscale=$data["Salary"];
   $lastlogin=$data["Login"];
+  $img=$data["Image"];
+  $temp1= str_replace("%role%",$role,$temp1);
   $temp1= str_replace("%activetime%",$active,$temp1);
   $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);
   $temp1= str_replace("%payscale%",$payscale,$temp1);
+  $temp1= str_replace("%img%",$img,$temp1);
   $temp1=str_replace($tmp,"",$temp1);
   echo str_replace("hai","hr",$temp1);
 
@@ -223,18 +227,21 @@ if($role=="hr")
 }
 else{
   $sql="SELECT *
-FROM employees_data where id='$id'; ";  
-$res= $connect -> query($sql);  
+FROM employees_data where id='$id'; ";
+$res= $connect -> query($sql);
 $data = $res -> fetch_assoc();
 $name=$data["First_Name"];
 $temp1= str_replace("vicky",$name,$temp);
  $active=$data["Hours_active"];
  $payscale=$data["Salary"];
  $lastlogin=$data["Login"];
+ $img=$data["Image"];
+ $temp1= str_replace("%role%","employee",$temp1);
  $temp1= str_replace("%activetime%",$active,$temp1);
  $temp1= str_replace("%id%",$id,$temp1);
  $temp1= str_replace("%role%",$params["role"],$temp1);
  $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);
+ $temp1= str_replace("%img%",$img,$temp1);
  $temp1= str_replace("%payscale%",$payscale,$temp1);
  echo str_replace("hai","employee",$temp1);
 // echo $lastlogin;
@@ -242,18 +249,18 @@ $temp1= str_replace("vicky",$name,$temp);
 }
 
 
- 
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     ?>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     ?>
