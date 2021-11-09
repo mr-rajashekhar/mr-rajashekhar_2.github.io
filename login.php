@@ -15,6 +15,8 @@ if(isset($_POST["hr_signin"])){
     $_SESSION['loggedin']=true;
     $_SESSION['id']=$row["id"];
     $_SESSION["role"]="hr";
+    $sql="UPDATE  hr  SET Login=now() where  id='$id' ";
+    $res= $connect -> query($sql);
     header('Location: hrdash.php');
     exit();
     

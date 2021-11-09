@@ -79,9 +79,9 @@ $temp='<!DOCTYPE html>
       <center>
       <div class="buttons">
           <a href="activity.php?id=%id%"><button class="primary">activity</button></a>
-          <button class="primary">
+          <a href="salary.php?id=%id%&role=%role%"><button class="primary">
              salary
-          </button>
+          </button></a>
       </div>
       </center>
       <!-- <center>
@@ -135,7 +135,7 @@ $temp='<!DOCTYPE html>
           <center>
           <div class="hr1">
 
-        <form action="anclick_admin.php/id=%id%&role=%role%" method="post" class="form" style="height:200px;"> <center><h3>Change Password</h3></center>
+        <form action="onclick_admin.php?id=%id%&role=%role%" method="post" class="form" style="height:200px;"> <center><h3>Change Password</h3></center>
           <div class="container" style="height:40px;">
             <input type="text" name="pwd" class="input" placeholder="a" />
             <label for="" class="label">New Password</label>
@@ -178,7 +178,7 @@ parse_str($url_components['query'], $params);
 $id=$params["id"];
 $role=$params["role"];
 $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-if(isset($_POST["changeBtn"])){
+if(isset($_POST["emp_signin"])){
 
 $new_password=$_POST["pwd"];
 if($params["role"]=="hr"){
