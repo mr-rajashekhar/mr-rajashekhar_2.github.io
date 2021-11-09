@@ -24,7 +24,7 @@ echo " $latitude ";
 echo $date;
 
   $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
-  $sql="SELECT * FROM activity where id='$id' and date='$date';";
+  $sql="SELECT * FROM activity where id='$id' and date='$date'";
   $res= $connect -> query($sql);
   if($res){
     $sql = "UPDATE activity
