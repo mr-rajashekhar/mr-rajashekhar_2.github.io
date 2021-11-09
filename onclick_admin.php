@@ -20,28 +20,29 @@ $temp='<!DOCTYPE html>
       rel="stylesheet"
     />
     <style>
-    .hr{
-      margin-left:200px;}
-      button {
-        background-color: purple;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-       width: 90px;
-      }
-      .imgcontainer{
-        height:5px;
-        width: 5px;
-      }
+    .hr1 {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      /* height: 100vh; */
+      height: 650px;
+      width: 420px;
+      /* height: 540px;
+      width: 660px;
+      margin-left: 30px;
+      margin-right: 30px;
+      padding: 40px;
+      border-radius: 30px; */
+    }
+    .buttons{
+      width:100px;
     </style>
   </head>
   <body>
     <div class="wrap">
       <div class="sidebar">
         <ul>
-        <a href="admindash.php"> 
+        <a href="admindash.php">
           <li >
             <ion-icon name="home" size="large"></ion-icon>
           </li></a>
@@ -69,25 +70,27 @@ $temp='<!DOCTYPE html>
         </div>
         <div class="sub">
  <center>
-      
+
         <div class="card-container">
        <div class="imagecontainer"><img class="round" src="./%role%_images/%img%" height=150px width=150px alt="user" /></div>
-        
+
       <h3>vicky</h3>
       <h4>hai</h4>
+      <center>
       <div class="buttons">
           <a href="activity.php?id=%id%"><button class="primary">activity</button></a>
           <button class="primary">
              salary
           </button>
       </div>
+      </center>
       <!-- <center>
         <div class="x"> -->
-      
+
         <!-- </div>
       </center> -->
   </div>
- 
+
 </center>
 </div>
         <div class="sub">
@@ -127,11 +130,11 @@ $temp='<!DOCTYPE html>
             </h1>
             </div>
           </div>
-          
+
           </div>
-          <center>  
-          <div class="hr">
-         
+          <center>
+          <div class="hr1">
+
         <form action="anclick_admin.php/id=%id%&role=%role%" method="post" class="form" style="height:200px;"> <center><h3>Change Password</h3></center>
           <div class="container" style="height:40px;">
             <input type="text" name="pwd" class="input" placeholder="a" />
@@ -144,7 +147,7 @@ $temp='<!DOCTYPE html>
             value="change"
           />
         </form>
-       
+
     </div>
     </center>
     <script
@@ -158,17 +161,17 @@ $temp='<!DOCTYPE html>
   </body>
 </html>';
 
-if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
-  $url = "https://";   
-else  
-  $url = "http://";   
-// Append the host(domain name, ip) to the URL.   
-$url.= $_SERVER['HTTP_HOST'];   
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+  $url = "https://";
+else
+  $url = "http://";
+// Append the host(domain name, ip) to the URL.
+$url.= $_SERVER['HTTP_HOST'];
 
-// Append the requested resource location to the URL   
-$url.= $_SERVER['REQUEST_URI'];    
+// Append the requested resource location to the URL
+$url.= $_SERVER['REQUEST_URI'];
 $url_components = parse_url($url);
- 
+
 // Use parse_str() function to parse the
 // string passed via URL
 parse_str($url_components['query'], $params);
@@ -176,7 +179,7 @@ $id=$params["id"];
 $role=$params["role"];
 $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
 if(isset($_POST["changeBtn"])){
- 
+
 $new_password=$_POST["pwd"];
 if($params["role"]=="hr"){
   $sql = "UPDATE hr
@@ -189,7 +192,7 @@ else{
 	WHERE id = '$id'" ;
 }
 
-$res= $connect -> query($sql); 
+$res= $connect -> query($sql);
 
 
 
@@ -199,12 +202,12 @@ $res= $connect -> query($sql);
 
 
 }
-     
+
 if($role=="hr")
 {
   $sql="SELECT *
-  FROM hr where id='$id'; "; 
-  $res= $connect -> query($sql);  
+  FROM hr where id='$id'; ";
+  $res= $connect -> query($sql);
   $data = $res -> fetch_assoc();
   $name=$data["First_Name"];
   $temp1= str_replace("vicky",$name,$temp);
@@ -224,8 +227,8 @@ if($role=="hr")
 }
 else{
   $sql="SELECT *
-FROM employees_data where id='$id'; ";  
-$res= $connect -> query($sql);  
+FROM employees_data where id='$id'; ";
+$res= $connect -> query($sql);
 $data = $res -> fetch_assoc();
 $name=$data["First_Name"];
 $temp1= str_replace("vicky",$name,$temp);
@@ -246,18 +249,18 @@ $temp1= str_replace("vicky",$name,$temp);
 }
 
 
- 
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     ?>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     ?>
