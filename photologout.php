@@ -36,7 +36,7 @@ $dir = './userimages/';
     $sql = "UPDATE  employees_data  SET  Hours_active = '$new' WHERE id $id";
     $conn->query($sql);
     $sql = "UPDATE employees_data SET Status=0 WHERE id = $id";
-    $res= $connect -> query($sql);
+    $res= $conn -> query($sql);
     header('Location: login.html');
     }
   
