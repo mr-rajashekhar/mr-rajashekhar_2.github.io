@@ -20,7 +20,8 @@ $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sq
 if($role=="hr"){
   $sql="SELECT * from hr where id=$id";
   $res= $connect -> query($sql);
-  $row = mysqli_fetch_assoc($res);
+  if($res){
+    $row = mysqli_fetch_assoc($res);
   if($row["Status"]){
     $logintime=$row["Login"];
     $time=time();
@@ -41,9 +42,13 @@ if($role=="hr"){
 	 $diff = ($end-$str)/60;
    $active=$row["Hours_active"];
    $payscale=$row["Salary"];
-   $pay=($diff+$active)*$payscale;
+   $pay=($active)*$payscale;
    echo $pay;
 
+  }
+  }
+  else{
+    echo "no res";
   }
 }
 else{
@@ -68,10 +73,12 @@ else{
     $str = strtotime($logintime);
 	 $end = strtotime($time);
 	 $diff = ($end-$str)/60;
+   echo " $diff ";
    $active=$row["Hours_active"];
    $payscale=$row["Salary"];
-   $pay=($diff+$active)*$payscale;
+   $pay=($active)*$payscale;
    echo $pay;
+   
 
   }
 

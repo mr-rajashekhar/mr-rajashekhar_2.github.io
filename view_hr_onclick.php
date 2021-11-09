@@ -101,9 +101,9 @@ button:hover {
         <a href="activity.php?id=%id%"><button class="primary">
             activity
         </button></a>
-        <button class="primary">
-            salary
-        </button>
+        <a href="salary.php?id=%id%&role=%role%"><button class="primary">
+             salary
+          </button></a>
     </div>
     
 </div>
@@ -193,6 +193,7 @@ parse_str($url_components['query'], $params);
 $id=$params["id"];
 $role=$params["role"];
 $temp= str_replace("%id%",$id,$temp);
+$temp= str_replace("%role%",$role,$temp);
 $sql="SELECT *
 FROM employees_data where id='$id'; ";  
 $res= $connect -> query($sql);  

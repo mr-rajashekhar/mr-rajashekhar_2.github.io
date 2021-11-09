@@ -119,33 +119,33 @@
   </body>
 </html>
 <?php
-$conn = new mysqli("localhost","root","","company");
-//$conn = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+// $conn = new mysqli("localhost","root","","company");
+$conn = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
 if($conn-> connect_error)
 die("Connection failed" . $conn->connect_error);
 
-$sql = "CREATE TABLE hr(
-  id int(255) NOT NULL AUTO_INCREMENT,
-    First_Name varchar(120) null default'NOT NULL',
-  Last_Name varchar(120) null default'NOT NULL',
-  User_name varchar(120) null default'NOT NULL',
-  Password varchar(20),
-  Age int(2),
-  Gender char(6),
+// $sql = "CREATE TABLE hr(
+//   id int(255) NOT NULL AUTO_INCREMENT,
+//     First_Name varchar(120) null default'NOT NULL',
+//   Last_Name varchar(120) null default'NOT NULL',
+//   User_name varchar(120) null default'NOT NULL',
+//   Password varchar(20),
+//   Age int(2),
+//   Gender char(6),
   
-  Hours_active DECIMAL(5,2) NOT NULL,
-  Salary numeric(6) NOT NULL ,
-  Image varchar(120),
-  Status BOOLEAN NOT NULL DEFAULT 0,
-  Payment numeric(6) NOT NULL,
-  Login TIME,
-  Logout TIME,
-  Recent_activity TIME,
-  primary key(id)
-    )";
-    if($conn->query($sql)===true)
-    echo "Table created successfully" . "<br>";
-     else echo "Error creating table: " .$conn->error . "<br>";
+//   Hours_active DECIMAL(5,2) NOT NULL,
+//   Salary numeric(6) NOT NULL ,
+//   Image varchar(120),
+//   Status BOOLEAN NOT NULL DEFAULT 0,
+//   Payment numeric(6) NOT NULL,
+//   Login TIME,
+//   Logout TIME,
+//   Recent_activity TIME,
+//   primary key(id)
+//     )";
+//     if($conn->query($sql)===true)
+//     echo "Table created successfully" . "<br>";
+//      else echo "Error creating table: " .$conn->error . "<br>";
 @$add_new = $_POST["submit"];
 
 

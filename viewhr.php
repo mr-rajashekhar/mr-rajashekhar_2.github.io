@@ -62,6 +62,9 @@
        <!-- for tiles -->
        <div class="tiles">
        <?php
+        if(!isset($_SESSION["admin"])|| !$_SESSION["admin"]){
+          header('Location: index.html');
+        }
        $temp='<a href="onclick_admin.php?id=xy&&role=hr"><div class="card-container">
        <img class="round" src="./hr_images/%img%" height=150px width=150px alt="user" />
        <h3>vicky</h3>

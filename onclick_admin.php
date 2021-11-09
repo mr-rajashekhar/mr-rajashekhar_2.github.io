@@ -215,6 +215,7 @@ if($role=="hr")
   $payscale=$data["Salary"];
   $lastlogin=$data["Login"];
   $img=$data["Image"];
+  $temp1= str_replace("%id%",$id,$temp1);
   $temp1= str_replace("%role%",$role,$temp1);
   $temp1= str_replace("%activetime%",$active,$temp1);
   $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);

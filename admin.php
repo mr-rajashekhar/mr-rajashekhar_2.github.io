@@ -1,3 +1,16 @@
+<?php
+if(isset($_POST["submit"])){
+  $user=$_POST["uname"];
+  $pass=$_POST["psw"];
+  if($user=="admin"&& $pass="admin"){
+    session_start();
+    $_SESSION["admin"]=true;
+    header('Location: admindash.php');
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,7 +27,7 @@
     <h4>Login To Continue...</h4>
 
     <div class="hr">
-      <form action="/action_page.php" method="post">
+      <form action="./admin.php" method="post">
         <h1>ADMIN Login</h1>
         <div class="imgcontainer">
           <img src="admin.png" alt="Avatar" class="avatar" />
@@ -38,7 +51,7 @@
             required
           />
 
-          <button type="submit">Login</button>
+          <button type="submit" name="submit">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember" />
             Remember me
