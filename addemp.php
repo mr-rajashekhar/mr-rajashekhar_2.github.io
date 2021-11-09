@@ -144,7 +144,7 @@ die("Connection failed" . $conn->connect_error);
 
 // ADDING A NEW EMPLOYEE
 if($add_new){
-	echo "hi";
+	
 	
 	$firstname = $_POST["Firstname"];
 	$lastname = $_POST["Lastname"];
