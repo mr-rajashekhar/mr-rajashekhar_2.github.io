@@ -46,8 +46,11 @@ $dir = './userimages/';
 .imgcont {
   margin-top: 20px;
   border-radius: 60px;
-  height:120px;
-  weight:120px;
+  /* height:120px;
+  weight:120px; */
+}
+h2{
+  color:black;
 }
       </style>
     </head>
@@ -64,11 +67,9 @@ $dir = './userimages/';
               </div>
             </div>
           </a>
-          <div class="imgcont" style="margin-top: 20px;
-  border-radius: 50px; ">
+          <div class="imgcont" style="margin-top: 20px;">
             <img src=
-            
-            
+              "hr1.png"            
              width="100%" height="100%" />
           </div>
           <center>
