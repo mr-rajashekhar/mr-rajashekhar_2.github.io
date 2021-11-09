@@ -166,20 +166,6 @@ h1 {
   background: none;
   z-index: 1;
 }
-/* .input1 {
-  position: absolute;
-  /* top: 0px;
-  left: 0px; */
-/* height: 7%;
-  width: 25%;
-  border: 1px solid #dadce0;
-  border-radius: 7px;
-  font-size: 16px;
-  padding: 10px 20px;
-  outline: none;
-  background: none;
-  z-index: 1;
-} */
 ::placeholder {
   color: transparent;
 }
