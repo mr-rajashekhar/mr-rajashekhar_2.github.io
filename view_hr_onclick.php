@@ -20,6 +20,9 @@ $temp='<!DOCTYPE html>
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <style>
            .sidebar {
   width: 200px;
@@ -33,6 +36,21 @@ $temp='<!DOCTYPE html>
 }
 .time1 {
   font-size: 50px;
+}
+button {
+  cursor: pointer;
+  text-align: center;
+  transition-duration: 0.4s;
+  margin:20px;
+  font-size:16px;
+  font-family: Poppins, sans-serif;
+}
+
+button:hover {
+  background-color: white; /* Green */
+  color: navyblue;
+  cursor:pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
     </style>

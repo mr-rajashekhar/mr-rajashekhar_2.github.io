@@ -6,8 +6,8 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="emplist_for_hr.css">
     <link rel="stylesheet" href="hrdash.css">
+    <link rel="stylesheet" href="emplist_for_hr.css">
     <style>
       .sidebar {
   width: 200px;
