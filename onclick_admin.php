@@ -20,17 +20,22 @@ $temp='<!DOCTYPE html>
       rel="stylesheet"
     />
     <style>
-    .hr{
-      margin-left:200px;}
-      button {
-        background-color: purple;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-       width: 90px;
-      }
+    .hr1 {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      /* height: 100vh; */
+      height: 650px;
+      width: 420px;
+      /* height: 540px;
+      width: 660px;
+      margin-left: 30px;
+      margin-right: 30px;
+      padding: 40px;
+      border-radius: 30px; */
+    }
+    .buttons{
+      width:100px;
     </style>
   </head>
   <body>
@@ -70,12 +75,14 @@ $temp='<!DOCTYPE html>
       <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
       <h3>vicky</h3>
       <h4>hai</h4>
+      <center>
       <div class="buttons">
           <a href="activity.php?id=%id%"><button class="primary">activity</button></a>
           <button class="primary">
              salary
           </button>
       </div>
+      </center>
       <!-- <center>
         <div class="x"> -->
       
@@ -125,7 +132,7 @@ $temp='<!DOCTYPE html>
           
           </div>
           <center>  
-          <div class="hr">
+          <div class="hr1">
          
         <form action="anclick_admin.php/id=%id%&role=%role%" method="post" class="form" style="height:200px;"> <center><h3>Change Password</h3></center>
           <div class="container" style="height:40px;">
