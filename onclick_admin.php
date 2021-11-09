@@ -1,5 +1,6 @@
 
 <?php
+
 $tmp='<button class="primary">activity</button>';
 $temp='<!DOCTYPE html>
 <html>
@@ -64,13 +65,13 @@ $temp='<!DOCTYPE html>
         </div>
         <div class="sub">
  <center>
-
+      
         <div class="card-container">
       <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
       <h3>vicky</h3>
       <h4>hai</h4>
       <div class="buttons">
-          <button class="primary">activity</button>
+          <a href="activity.php?id=%id%"><button class="primary">activity</button></a>
           <button class="primary">
              salary
           </button>
@@ -126,16 +127,16 @@ $temp='<!DOCTYPE html>
           <center>  
           <div class="hr">
          
-        <form action="login.php" method="post" class="form" style="height:300px;"> <center><h3>Change Password</h3></center>
+        <form action="anclick_admin.php/id=%id%&role=%role%" method="post" class="form" style="height:300px;"> <center><h3>Change Password</h3></center>
           <div class="container" style="height:40px;">
-            <input type="text" name="emp_uname" class="input" placeholder="a" />
+            <input type="text" name="pwd" class="input" placeholder="a" />
             <label for="" class="label">New Password</label>
           </div>
 
           <div class="container" style="height:40px;">
             <input
               type="password"
-              name="emp_pwd"
+              name="pwd_confirm"
               class="input"
               placeholder="a"
             />
@@ -144,8 +145,8 @@ $temp='<!DOCTYPE html>
           <input
             type="submit"
             name="emp_signin"
-            class="submitBtn"
-            value="Sign in"
+            class="changeBtn"
+            value="change"
           />
         </form>
        
@@ -178,8 +179,35 @@ $url_components = parse_url($url);
 parse_str($url_components['query'], $params);
 $id=$params["id"];
 $role=$params["role"];
-$connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");     
-if($role=="hr"){$sql="SELECT *
+$connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+if(isset($_POST["changeBtn"])){
+ 
+$new_password=$_POST["pwd"];
+if($params["role"]=="hr"){
+  $sql = "UPDATE hr
+	SET Password = '$new_password'
+	WHERE id = '$id'" ;
+}
+else{
+  $sql = "UPDATE employees_data
+	SET Password = '$new_password'
+	WHERE id = '$id'" ;
+}
+
+$res= $connect -> query($sql); 
+
+
+
+
+
+
+
+
+}
+     
+if($role=="hr")
+{
+  $sql="SELECT *
   FROM hr where id='$id'; "; 
   $res= $connect -> query($sql);  
   $data = $res -> fetch_assoc();
@@ -207,9 +235,12 @@ $temp1= str_replace("vicky",$name,$temp);
  $payscale=$data["Salary"];
  $lastlogin=$data["Login"];
  $temp1= str_replace("%activetime%",$active,$temp1);
+ $temp1= str_replace("%id%",$id,$temp1);
+ $temp1= str_replace("%role%",$params["role"],$temp1);
  $temp1= str_replace("%lastlogin%",$lastlogin,$temp1);
  $temp1= str_replace("%payscale%",$payscale,$temp1);
  echo str_replace("hai","employee",$temp1);
+// echo $lastlogin;
 
 }
 
