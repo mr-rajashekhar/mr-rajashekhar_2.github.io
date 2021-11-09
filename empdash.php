@@ -35,6 +35,12 @@ $dir = './userimages/';
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
         rel="stylesheet"
       />
+      <style>
+        .time1 {
+  font-size: 50px;
+  color: white;
+}
+      </style>
     </head>
     <body>
       <div class="wrap">
@@ -124,7 +130,7 @@ $dir = './userimages/';
                 </div>
                 <span>Last Login</span><br />
               <!-- <h1>300</h1> -->
-              <h1 class="time">
+              <h1 class="time1">
               <?php
               
               $id=$_SESSION["id"];
