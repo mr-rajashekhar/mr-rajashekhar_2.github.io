@@ -344,3 +344,13 @@ button.primary.ghost {
 .p {
   margin-bottom: 3px;
 }
+.sidebar {
+  width: 200px;
+  height: 800px;
+  background: #fff;
+  position: fixed;
+  margin-right: 200px;
+}
+.main {
+  margin-left: 200px;
+}

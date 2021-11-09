@@ -82,7 +82,7 @@
         </div>
         <div class="sub">
         <div class="card">
-          <a href="viewemp.php">
+          <a href="emplist_for_hr.php">
           <div class="card">
             <div class="info">
               <div class="card-icon">
