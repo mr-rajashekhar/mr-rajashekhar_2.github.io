@@ -72,11 +72,9 @@ $temp='<!DOCTYPE html>
         </div>
        <center>
         <div class="card-container">
-    <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+        <img class="round" src="./employee_images/%img%" height=150px width=150px alt="user" />
     <h3>vicky</h3>
-    <h6>hai
-      
-    </h6>
+    
     <div class="buttons">
         <a href="activity.php?id=%id%"><button class="primary">
             activity
@@ -182,7 +180,9 @@ $temp1= str_replace("vicky",$name,$temp);
  $active=$data["Hours_active"];
  $payscale=$data["Salary"];
  $lastlogin=$data["Login"];
+ $img=$data["Image"];
  $temp1= str_replace("%active%",$active,$temp1);
+ $temp1= str_replace("%img%",$img,$temp1);
  $temp1= str_replace("%lst%",$lastlogin,$temp1);
  $temp1= str_replace("%pay%",$payscale,$temp1);
 echo $temp1;

@@ -40,6 +40,13 @@ $dir = './userimages/';
   font-size: 50px;
   color: white;
 }
+/* .circular{
+  border-radius: 25px;
+} */
+/* .imgcont {
+  margin-top: 20px;
+  border-radius: 50px;
+} */
       </style>
     </head>
     <body>
@@ -48,15 +55,31 @@ $dir = './userimages/';
           <a class="link" href="index.html" target="_blank">
             <div class="main_1">
               <div class="icon">
-                <img src="logo.png" height="40px" width="40px" />
+                <img src="logo.png" height="40px" width="40px" class="circular"/>
               </div>
               <div class="info_1">
                 <h2>Tradinglaza</h2>
               </div>
             </div>
           </a>
-          <div class="imgcont">
-            <img src="male.png" width="100%" height="100%" />
+          <div class="imgcont" style="margin-top: 20px;
+  border-radius: 50px;">
+            <img src=
+            <?php
+            
+            $id=$_SESSION["id"];
+            $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+            $sql="SELECT * FROM employees_data where id ='$id' ";
+            $res= $connect -> query($sql);
+            $row = mysqli_fetch_assoc($res);
+            $name=$row["Image"];
+            $img="./employee_images/".$name;
+            echo $img;
+            
+            ?>
+            
+            
+             width="100%" height="100%" />
           </div>
           <center>
             <h2>

@@ -113,9 +113,10 @@ a {
   border-radius: 10px;
   color: #fff;
 }
-.imgcont {
+/* .imgcont {
   margin-top: 20px;
-}
+  border-radius: 50px;
+} */
 .imgcont span {
   margin-top: 0;
   margin-left: 100px;
