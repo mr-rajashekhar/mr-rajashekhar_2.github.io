@@ -31,6 +31,10 @@ $temp='<!DOCTYPE html>
 .main{
   margin-left:200px;
 }
+.time1 {
+  font-size: 50px;
+}
+
     </style>
   </head>
   <body>
@@ -112,7 +116,7 @@ $temp='<!DOCTYPE html>
               </div>
               <span>Last Login</span><br />
             <!-- <h1>300</h1> -->
-            <h1 class="time">
+            <h1 class="time1">
             %lst%
             </h1>
             </div>

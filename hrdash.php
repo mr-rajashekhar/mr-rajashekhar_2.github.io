@@ -138,7 +138,6 @@
       </div>
       <div class="sub">
       <div class="card">
-          <a href="viewhr.html">
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -161,11 +160,9 @@
             ?>
             </h1>
             </div>
-          </a>
           </div>
           </div>
           <div class="card">
-          <a href="viewhr.html">
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -188,11 +185,9 @@
             ?>
             </h1>
             </div>
-          </a>
           </div>
           </div>
           <div class="card">
-          <a href="viewhr.html">
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -216,7 +211,7 @@
             ?>
             </h1>
             </div>
-          </a>
+         
           </div>
           </div>
       </div>
