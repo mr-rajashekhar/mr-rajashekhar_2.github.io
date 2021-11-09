@@ -51,7 +51,7 @@
         </div>
         <div class="head">
           <div class="hr">
-            <form action="" class="form">
+            <form action="addemp.php" method="post" enctype="multipart/form-data" class="form">
               <h2>Fill details</h2>
               <!-- <div class="imgcontainer">
                 <img src="hr.png" alt="Avatar" class="avatar" />
@@ -89,14 +89,13 @@
                 <input type="text" class="input" placeholder="a" name="password">
                 <label for="" class="label">Password</label>
               </div>
-<!--         
+        
               <div class="container">
-                <input type="text" class="input" placeholder="a" name="password">
-                <label for="" class="label">Confirm Password</label>
-              </div> -->
-              <h4>Upload Profile Photo</h4>
+              <p >Gender : Male <input type="radio" name="new_gender" value="male" required id=""> Female <input type="radio" name="new_gender" value="female" id=""></p>
+              </div>
+              <h4>Upload Profile Photo</h4>             
               <input type="file" class="input1" id="myFile" name="filename">
-              <input type="submit" class="submitBtn" value="Add" />
+              <input type="submit" class="submitBtn" value="Add" name="submit"  />
             </form>
           </div>
        
@@ -111,3 +110,77 @@
     ></script>
   </body>
 </html>
+<?php
+$conn = new mysqli("localhost","root","","company");
+//$conn = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
+if($conn-> connect_error)
+die("Connection failed" . $conn->connect_error);
+
+$sql = "CREATE TABLE employees_data(
+  id int(255) NOT NULL AUTO_INCREMENT,
+    First_Name varchar(120) null default'NOT NULL',
+  Last_Name varchar(120) null default'NOT NULL',
+  User_name varchar(120) null default'NOT NULL',
+  Password varchar(20),
+  Age int(2),
+  Gender char(6),
+  
+  Hours_active DECIMAL(5,2) NOT NULL,
+  Salary numeric(6) NOT NULL ,
+  Image varchar(120),
+  Status BOOLEAN NOT NULL DEFAULT 0,
+  Payment numeric(6) NOT NULL,
+  Login TIME,
+  Logout TIME,
+  Recent_activity TIME,
+  primary key(id)
+    )";
+    if($conn->query($sql)===true)
+    echo "Table created successfully" . "<br>";
+     else echo "Error creating table: " .$conn->error . "<br>";
+@$add_new = $_POST["submit"];
+
+
+
+// ADDING A NEW EMPLOYEE
+if($add_new){
+	echo "hi";
+	
+	$firstname = $_POST["Firstname"];
+	$lastname = $_POST["Lastname"];
+	$username = $_POST["Username"];
+	$pass = $_POST["password"];
+	$age = $_POST["Age"];
+//	$gender =  $_POST["gender"];
+
+
+	$sal = $_POST["Payscale"];
+   
+	$image = $_FILES["filename"];
+   
+	
+	$filename = $image['name'];
+	$temp_loc = $image['tmp_name'];
+	$dum = explode('.',$filename);
+	
+	$extension = strtolower($dum[1]);
+	$valid_extension = array('jpg' ,'png', 'jpeg');
+
+	if(in_array($extension, $valid_extension))
+	{
+		$des_loc = 'employee_images/'.$filename;
+		move_uploaded_file($temp_loc , $des_loc);
+		
+		// '$gender' ,Gender
+	$sql = "INSERT into employees_data(First_Name,Last_Name,User_name,Password,Age,Salary,Image) 
+	VALUES('$firstname','$lastname','$username','$pass','$age','$sal','$filename')";
+	
+	if ($conn->query($sql) === TRUE)
+    echo "New Employee added to our company :) ";
+    else echo "Error: ". $conn->error . "<br>"; 
+		
+		
+	}
+	else echo "Image can't be uploaded into the database" . "<br>";
+	
+}
