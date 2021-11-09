@@ -83,7 +83,7 @@ button:hover {
         <ul>
          <a href="hrdash.php"> <li class="active">HOME</li></a>
   
-          <a href="login.html"><li>LOGOUT</li></a>
+          <a href="logout_hr.php"><li>LOGOUT</li></a>
         </ul>
       </div>
       <div class="main">
