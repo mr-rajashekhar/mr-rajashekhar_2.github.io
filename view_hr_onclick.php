@@ -89,23 +89,23 @@
     <p>User interface designer and <br /> front-end developer</p>
     <div class="buttons">
         <button class="primary">
-            Image
+            Activity
         </button>
         <button class="primary">
-            Location
+        Salary
         </button>
     </div>
-    <center>
+    <!-- <center>
       <div class="x">
     <button class="primary ">
-            Calculate Salary
+           
         </button></div>
-    </center>
+    </center> -->
 </div>
 </center>
       <div class="sub">
       <div class="card">
-          <a href="viewhr.html">
+  
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -127,11 +127,11 @@
             ?>
             </h1>
             </div>
-          </a>
+     
           </div>
           </div>
           <div class="card">
-          <a href="viewhr.html">
+
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -153,11 +153,10 @@
             ?>
             </h1>
             </div>
-          </a>
+
           </div>
           </div>
           <div class="card">
-          <a href="viewhr.html">
           <div class="card">
             <div class="info">
               <div class="card-icon">
@@ -179,7 +178,7 @@
             ?>
             </h1>
             </div>
-          </a>
+         
           </div>
           </div>
       </div>

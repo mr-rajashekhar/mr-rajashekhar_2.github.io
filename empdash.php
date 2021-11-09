@@ -63,10 +63,6 @@ $dir = './userimages/';
             $row = mysqli_fetch_assoc($res);
             $name=$row["First_Name"];
             echo $name;
-            
-            
-            
-            
             ?>
   
   
@@ -95,7 +91,6 @@ $dir = './userimages/';
           </div>
           <div class="sub">
           <div class="card">
-            <a href="viewhr.html">
             <div class="card">
               <div class="info">
                 <div class="card-icon">
@@ -119,11 +114,9 @@ $dir = './userimages/';
               ?>
               </h1>
               </div>
-            </a>
             </div>
             </div>
             <div class="card">
-            <a href="viewhr.html">
             <div class="card">
               <div class="info">
                 <div class="card-icon">
@@ -148,11 +141,9 @@ $dir = './userimages/';
               ?>
               </h1>
               </div>
-            </a>
             </div>
             </div>
             <div class="card">
-            <a href="viewhr.html">
             <div class="card">
               <div class="info">
                 <div class="card-icon">
@@ -174,7 +165,6 @@ $dir = './userimages/';
               ?>
               </h1>
               </div>
-            </a>
             </div>
             </div>
           </div>
