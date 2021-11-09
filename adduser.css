@@ -21,9 +21,8 @@
 .board_1 {
   display: flex;
   justify-content: center;
-
-  /* margin-left: 250px;
-  margin-right: 250px; */
+  margin-left: 100px;
+  /* margin-right: 250px; */
 }
 a {
   color: white;

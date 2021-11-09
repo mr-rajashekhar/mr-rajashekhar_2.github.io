@@ -244,8 +244,10 @@ h2 {
   margin-bottom: 0 rem;
 }
 .continue {
+  padding-top: 30px;
   color: #149be9;
 }
+
 .for-flex {
   display: flex;
   justify-content: center;
