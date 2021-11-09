@@ -29,6 +29,9 @@
 .main{
   margin-left:200px;
 }
+.time1 {
+  font-size: 50px;
+}
     </style>
   </head>
   <body>
@@ -170,7 +173,7 @@
               </div>
               <span>Last Login</span><br />
             <!-- <h1>300</h1> -->
-            <h1 class="time">
+            <h1 class="time1">
             <?php
             
             $id=$_SESSION["id"];
