@@ -52,9 +52,6 @@
             <!-- <h1>300</h1> -->
             <?php
             session_start();
-            if(!isset($_SESSION["admin"])|| !$_SESSION["admin"]){
-              header('Location: index.html');
-            }
             $connect = new mysqli("sql11.freesqldatabase.com","sql11449131","5VrzvwfXZe","sql11449131");
             $sql="SELECT *
             FROM hr; ";
