@@ -31,7 +31,12 @@ The login page for Admin is put seperately
     He can check the salary of the employee by his id
     He can view the current location in the GOOGLE MAPS and also the latitude and longitude.
 
-                                                                                                    Thank You
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                    Thank You
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
