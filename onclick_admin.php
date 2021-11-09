@@ -42,7 +42,7 @@ $temp='<!DOCTYPE html>
             <ion-icon name="home" size="large"></ion-icon>
           </li></a>
           <a href="adduser.html">  <li><ion-icon name="person-add-sharp" size="large"></ion-icon></li></a>
-          <li class="active"><ion-icon name="eye-sharp" size="large">VIEW</ion-icon></li>
+          <a href="view.html"><li class="active"><ion-icon name="eye-sharp" size="large">VIEW</ion-icon></li></a>
           <li><ion-icon name="log-out-sharp" size="large"></ion-icon></li>
         </ul>
       </div>
@@ -127,20 +127,10 @@ $temp='<!DOCTYPE html>
           <center>  
           <div class="hr">
          
-        <form action="anclick_admin.php/id=%id%&role=%role%" method="post" class="form" style="height:300px;"> <center><h3>Change Password</h3></center>
+        <form action="anclick_admin.php/id=%id%&role=%role%" method="post" class="form" style="height:200px;"> <center><h3>Change Password</h3></center>
           <div class="container" style="height:40px;">
             <input type="text" name="pwd" class="input" placeholder="a" />
             <label for="" class="label">New Password</label>
-          </div>
-
-          <div class="container" style="height:40px;">
-            <input
-              type="password"
-              name="pwd_confirm"
-              class="input"
-              placeholder="a"
-            />
-            <label for="" class="label">Confirm Password</label>
           </div>
           <input
             type="submit"
